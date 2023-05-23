@@ -1,0 +1,768 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"/>
+<script>window.__ezWillLoadCnx=1;</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],s=[],r=!0,a=function(e,i,n,o,s,r,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,c=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=s,this.deleteWhenComplete=r,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),c.isInitialized=!0,c.isComplete=!0,f("... func.apply: "+e);var i=c.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[c.funcName]),null!=n&&n.apply(null,this.parameters),!0===c.deleteWhenComplete&&delete t[e],!0===c.isBlock&&(f("----- F'D: "+c.name),u())}},l=function(e,i,t,n,o,s,r){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=s,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=r,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===s&&(t.defer=!0),t.onerror=function(){f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},c=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function d(e){!0!==h(e)&&0!=r&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(s))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,r,a,c,h,f,u){var m=new l(e,i,n,r,a,c,h,u);!0===f?o[e]=m:s[e]=m,t[e]=m,d(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),s[e]=n,t[e]=n,d(n)},addFunc:function(e,n,r,l,c,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var y=new a(e,n,r,l,c,f,u,p);!0===m?o[e]=y:s[e]=y,t[e]=y,d(y)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),s[e]=o,t[e]=o,d(o)},items:t,processAll:u,setallowLoad:function(e){r=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new c(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};</script>
+<link rel="preconnect" href="//www.googletagmanager.com" crossorigin>
+<link rel="preconnect" href="//go.ezoic.net" crossorigin>
+<style class='ezcritcss'>:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-black:#000;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:13, 110, 253;--bs-secondary-rgb:108, 117, 125;--bs-success-rgb:25, 135, 84;--bs-info-rgb:13, 202, 240;--bs-warning-rgb:255, 193, 7;--bs-danger-rgb:220, 53, 69;--bs-light-rgb:248, 249, 250;--bs-dark-rgb:33, 37, 41;--bs-white-rgb:255, 255, 255;--bs-black-rgb:0, 0, 0;--bs-body-color-rgb:33, 37, 41;--bs-body-bg-rgb:255, 255, 255;--bs-font-sans-serif:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--bs-font-monospace:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-bg:#fff;--bs-border-width:1px;--bs-border-style:solid;--bs-border-color:#dee2e6;--bs-border-color-translucent:rgba(0, 0, 0, 0.175);--bs-border-radius:0.375rem;--bs-border-radius-sm:0.25rem;--bs-border-radius-lg:0.5rem;--bs-border-radius-xl:1rem;--bs-border-radius-2xl:2rem;--bs-border-radius-pill:50rem;--bs-heading-color: ;--bs-link-color:#0d6efd;--bs-link-hover-color:#0a58ca;--bs-code-color:#d63384;--bs-highlight-bg:#fff3cd}*,::before,::after{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%}hr{margin:1rem 0;color:inherit;border:0;border-top:1px solid;opacity:.25}h3,h2,h1{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;color:var(--bs-heading-color)}h1{font-size:calc(1.375rem + 1.5vw)}@media (min-width:1200px){h1{font-size:2.5rem}}h2{font-size:calc(1.325rem + .9vw)}@media (min-width:1200px){h2{font-size:2rem}}h3{font-size:calc(1.3rem + .6vw)}@media (min-width:1200px){h3{font-size:1.75rem}}p{margin-top:0;margin-bottom:1rem}ul{padding-left:2rem}ul{margin-top:0;margin-bottom:1rem}a{color:var(--bs-link-color);text-decoration:underline}pre,code{font-family:var(--bs-font-monospace);font-size:1em}pre{display:block;margin-top:0;margin-bottom:1rem;overflow:auto;font-size:.875em}pre code{font-size:inherit;color:inherit;word-break:normal}code{font-size:.875em;color:var(--bs-code-color);word-wrap:break-word}img,svg{vertical-align:middle}button{border-radius:0}input,button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button{text-transform:none}button,[type=button]{-webkit-appearance:button}::-moz-focus-inner{padding:0;border-style:none}::-webkit-datetime-edit-fields-wrapper,::-webkit-datetime-edit-text,::-webkit-datetime-edit-minute,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-year-field{padding:0}::-webkit-inner-spin-button{height:auto}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-color-swatch-wrapper{padding:0}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}::file-selector-button{font:inherit;-webkit-appearance:button}.img-fluid{max-width:100%;height:auto}.container{--bs-gutter-x:1.5rem;--bs-gutter-y:0;width:100%;padding-right:calc(var(--bs-gutter-x)*.5);padding-left:calc(var(--bs-gutter-x)*.5);margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}@media (min-width:1400px){.container{max-width:1320px}}.row{--bs-gutter-x:1.5rem;--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-top:calc(-1*var(--bs-gutter-y));margin-right:calc(-.5*var(--bs-gutter-x));margin-left:calc(-.5*var(--bs-gutter-x))}.row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bs-gutter-x)*.5);padding-left:calc(var(--bs-gutter-x)*.5);margin-top:var(--bs-gutter-y)}.col{flex:1 0}@media (min-width:992px){.col-lg-4{flex:none;width:33.33333333%}.col-lg-8{flex:none;width:66.66666667%}}.collapse:not(.show){display:none}.nav-link{display:block;padding:var(--bs-nav-link-padding-y)var(--bs-nav-link-padding-x);font-size:var(--bs-nav-link-font-size);font-weight:var(--bs-nav-link-font-weight);color:var(--bs-nav-link-color);text-decoration:none}.navbar{--bs-navbar-padding-x:0;--bs-navbar-padding-y:0.5rem;--bs-navbar-color:rgba(0, 0, 0, 0.55);--bs-navbar-hover-color:rgba(0, 0, 0, 0.7);--bs-navbar-disabled-color:rgba(0, 0, 0, 0.3);--bs-navbar-active-color:rgba(0, 0, 0, 0.9);--bs-navbar-brand-padding-y:0.3125rem;--bs-navbar-brand-margin-end:1rem;--bs-navbar-brand-font-size:1.25rem;--bs-navbar-brand-color:rgba(0, 0, 0, 0.9);--bs-navbar-brand-hover-color:rgba(0, 0, 0, 0.9);--bs-navbar-nav-link-padding-x:0.5rem;--bs-navbar-toggler-padding-y:0.25rem;--bs-navbar-toggler-padding-x:0.75rem;--bs-navbar-toggler-font-size:1.25rem;--bs-navbar-toggler-border-color:rgba(0, 0, 0, 0.1);--bs-navbar-toggler-border-radius:0.375rem;--bs-navbar-toggler-focus-width:0.25rem;position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:var(--bs-navbar-padding-y)var(--bs-navbar-padding-x)}.navbar>.container{display:flex;flex-wrap:inherit;align-items:center;justify-content:space-between}.navbar-brand{padding-top:var(--bs-navbar-brand-padding-y);padding-bottom:var(--bs-navbar-brand-padding-y);margin-right:var(--bs-navbar-brand-margin-end);font-size:var(--bs-navbar-brand-font-size);color:var(--bs-navbar-brand-color);text-decoration:none;white-space:nowrap}.navbar-nav{--bs-nav-link-padding-x:0;--bs-nav-link-padding-y:0.5rem;--bs-nav-link-color:var(--bs-navbar-color);--bs-nav-link-hover-color:var(--bs-navbar-hover-color);--bs-nav-link-disabled-color:var(--bs-navbar-disabled-color);display:flex;flex-direction:column;padding-left:0;margin-bottom:0;list-style:none}.navbar-collapse{flex-basis:100%;flex-grow:1;align-items:center}.navbar-toggler{padding:var(--bs-navbar-toggler-padding-y)var(--bs-navbar-toggler-padding-x);font-size:var(--bs-navbar-toggler-font-size);line-height:1;color:var(--bs-navbar-color);background-color:transparent;border:var(--bs-border-width)solid var(--bs-navbar-toggler-border-color);border-radius:var(--bs-navbar-toggler-border-radius)}.navbar-toggler-icon{display:inline-block;width:1.5em;height:1.5em;vertical-align:middle;background-image:var(--bs-navbar-toggler-icon-bg);background-repeat:no-repeat;background-position:50%;background-size:100%}@media (min-width:992px){.navbar-expand-lg{flex-wrap:nowrap;justify-content:flex-start}.navbar-expand-lg .navbar-nav{flex-direction:row}.navbar-expand-lg .navbar-nav .nav-link{padding-right:var(--bs-navbar-nav-link-padding-x);padding-left:var(--bs-navbar-nav-link-padding-x)}.navbar-expand-lg .navbar-collapse{display:flex!important;flex-basis:auto}.navbar-expand-lg .navbar-toggler{display:none}}.card{--bs-card-spacer-y:1rem;--bs-card-spacer-x:1rem;--bs-card-title-spacer-y:0.5rem;--bs-card-border-width:1px;--bs-card-border-color:var(--bs-border-color-translucent);--bs-card-border-radius:0.375rem;--bs-card-box-shadow: ;--bs-card-inner-border-radius:calc(0.375rem - 1px);--bs-card-cap-padding-y:0.5rem;--bs-card-cap-padding-x:1rem;--bs-card-cap-bg:rgba(0, 0, 0, 0.03);--bs-card-cap-color: ;--bs-card-height: ;--bs-card-color: ;--bs-card-bg:#fff;--bs-card-img-overlay-padding:1rem;--bs-card-group-margin:0.75rem;position:relative;display:flex;flex-direction:column;min-width:0;height:var(--bs-card-height);word-wrap:break-word;background-color:var(--bs-card-bg);background-clip:border-box;border:var(--bs-card-border-width)solid var(--bs-card-border-color);border-radius:var(--bs-card-border-radius)}.card-body{flex:auto;padding:var(--bs-card-spacer-y)var(--bs-card-spacer-x);color:var(--bs-card-color)}.shadow-sm{box-shadow:0 .125rem .25rem rgba(0,0,0,.075)!important}.border-0{border:0!important}.border-bottom{border-bottom:var(--bs-border-width)var(--bs-border-style)var(--bs-border-color)!important}.my-0{margin-top:0!important;margin-bottom:0!important}.mb-4{margin-bottom:1.5rem!important}.mb-5{margin-bottom:3rem!important}.ms-auto{margin-left:auto!important}.px-4{padding-right:1.5rem!important;padding-left:1.5rem!important}.pt-5{padding-top:3rem!important}.pe-3{padding-right:1rem!important}.pb-5{padding-bottom:3rem!important}.text-secondary{--bs-text-opacity:1;color:rgba(var(--bs-secondary-rgb),var(--bs-text-opacity))!important}.bg-white{--bs-bg-opacity:1;background-color:rgba(var(--bs-white-rgb),var(--bs-bg-opacity))!important}body{line-height:1.8;font-size:20px;background-color:#f8f8f8}a{text-decoration:none;background-color:transparent}.navbar{font-size:1rem}.entry-content>ul{margin-top:1rem}.sidebar-area section{padding-top:1em;padding-bottom:1em}h3.widget-title{font-size:1.2rem}.entry-content h2{margin-bottom:1.5rem}.sidebar-area{font-size:17px}.card{border-radius:0}.card-body{padding:1.25rem}.main{padding-bottom:150px}pre.chroma{border-radius:5px;padding:1rem;margin:1.8rem 0;overflow:auto}div.highlight{margin-top:20px}.entry-content p{margin-bottom:1.2rem}.entry-content>p:first-child{margin-top:2rem}hr.entry-content-hr{margin:0 auto;width:70%;color:#6e6e6e}.search-box{position:relative}.search-input{padding:.3rem 1.7rem;width:100%;position:relative;background-color:#fff;border:1px solid #c4c8d8;border-radius:5px}.search-icon{position:absolute;z-index:1;top:50%;left:.5rem;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.tags span{display:block}.tag{font-weight:700}.tag.react{color:#62dafb;background-color:#333}.tag.javascript{background-color:#f0db4f;color:#323330}.tag.git{color:#f1502f}.tag.npm{color:#cc3534}.tag.devtools{color:#007c89}.tag.css{color:#0b00a7}.tag.nodejs{color:#3c873a}.tag.jquery{color:#0868ac}.tag.html{color:#f06529}.tag.mysql{color:#f29111}.tag.sequelize{color:#01aeef}.tag.php{color:#6e5eda}.tag.android{color:#93b425}.tag.java{color:#ed8b00}.tag.kotlin{color:#766db2}.tag.tableau{color:#2a5591}.tag.python{color:#4b8bbe;background-color:#ffe873}.chroma{color:#f8f8f2;background-color:#282a36}.chroma .kd{color:#8be9fd;font-style:italic}.chroma .nb{color:#8be9fd;font-style:italic}.chroma .mi{color:#bd93f9}.chroma .o{color:#ff79c6}.chroma .c1{color:#5a71b6}</style>
+<script data-ezscrex="false" data-pagespeed-no-defer data-cfasync="false" type="text/javascript">__ez.queue.addFile('fads.js', '/porpoiseant/fads.js?gcb=195-1&cb=11', true, [], true, false, false, true);</script>
+<script>var __ezaps=[{"slotID":"div-gpt-ad-sebhastian_com-leader-1-0","divID":"","slotName":"/1254144,22284635885/sebhastian_com-leader-1","sizes":[[728,90]],"floor":{"value":157,"currency":"USD"}},{"slotID":"div-gpt-ad-sebhastian_com-box-4-0","divID":"","slotName":"/1254144,22284635885/sebhastian_com-box-4","sizes":[[250,250]],"floor":{"value":220,"currency":"USD"}},{"slotID":"div-gpt-ad-sebhastian_com-large-billboard-2-0","divID":"","slotName":"/1254144,22284635885/sebhastian_com-large-billboard-2","sizes":[[250,250]],"floor":{"value":201,"currency":"USD"}},{"slotID":"div-gpt-ad-sebhastian_com-medrectangle-2-0","divID":"","slotName":"/1254144,22284635885/sebhastian_com-medrectangle-2","sizes":[[728,90]],"floor":{"value":294,"currency":"USD"}},{"slotID":"div-gpt-ad-sebhastian_com-large-leaderboard-2-0","divID":"","slotName":"/1254144,22284635885/sebhastian_com-large-leaderboard-2","sizes":[[336,280],[300,250]],"floor":{"value":79,"currency":"USD"}},{"slotID":"div-gpt-ad-sebhastian_com-large-mobile-banner-1-0","divID":"","slotName":"/1254144,22284635885/sebhastian_com-large-mobile-banner-1","sizes":[[250,250]]},{"slotID":"div-gpt-ad-sebhastian_com-large-mobile-banner-1-0_1","divID":"","slotName":"/1254144,22284635885/sebhastian_com-large-mobile-banner-1","sizes":[[250,250]]},{"slotID":"div-gpt-ad-sebhastian_com-large-mobile-banner-2-0","divID":"","slotName":"/1254144,22284635885/sebhastian_com-large-mobile-banner-2","sizes":[[300,250]],"floor":{"value":69,"currency":"USD"}},{"slotID":"div-gpt-ad-sebhastian_com-box-1-0","divID":"","slotName":"/1254144,22284635885/sebhastian_com-box-1","sizes":[[336,280],[300,250]],"floor":{"value":75,"currency":"USD"}},{"slotID":"div-gpt-ad-sebhastian_com-medrectangle-3-0","divID":"","slotName":"/1254144,22284635885/sebhastian_com-medrectangle-3","sizes":[[250,250]]}];var __ezapsVideo=[];__ezapid='aa05931b-5308-4ea3-95a2-adf84f4ffde4';</script>
+<script data-ezscrex="false" async data-pagespeed-no-defer type="text/javascript" src="/edmontonalberta/calgary.js?cb=16"></script>
+<script>window.ezslots_raw=[];var __sellerid='be34f13339c71fe169949439cfada9a8';var __schain_domain='';var __ez_nid ='1254144';__advertiserRule=[''];var ezasVars = {'cid':'2140334876','pid':'pub-8354615830610280','ssid':44};if(typeof window.ezAutoAdsSetup == 'undefined'){window.google_reactive_ads_global_state = {
+                adCount: {},
+                floatingAdsStacking: { maxZIndexListeners: [], maxZIndexRestrictions: {}, nextRestrictionId: 0 },
+                messageValidationEnabled: false,
+                reactiveTypeDisabledByPublisher: {},
+                reactiveTypeEnabledInAsfe: {},
+                sideRailAvailableSpace: [],
+                sideRailOverlappableElements: [],
+                stateForType: {},
+                tagSpecificState: {},
+                wasPlaTagProcessed: true,
+                wasReactiveAdConfigReceived: { 1: true, 2: true, 8: true },
+                wasReactiveAdVisible: {},
+                wasReactiveTagRequestSent: true,
+                description: "Can't disable auto ads programmatically on the page, so here we are!"
+            };};var __ezasAggressive=true;!function(){window.ezasvEvent=function(e,t){if(!0===e[0].isIntersecting){var i=e[0].target.attributes[0].value.substr(0,e[0].target.attributes[0].value.length-9);window.ezoSTPixelAdd(i,"viewed",1),t.disconnect()}},window.ezaslEvent=function(e,t){if(void 0!==e[0].target.attributes["data-ad-status"]){var i=e[0].target.attributes["data-ad-status"].value,o=e[0].target.attributes[0].value.substr(0,e[0].target.attributes[0].value.length-9);"filled"==i&&(window.ezoSTPixelAdd(o,"loaded",1),new IntersectionObserver(window.ezasvEvent,{threshold:[1]}).observe(document.getElementById(o+"-asloaded"))),"unfilled"==i&&setTimeout((function(){window.ezoAdBackFill(e)}),2e3),t.disconnect()}},window.ezoAdBackFill=function(e){var t=e[0].target,i=t.parentElement;t.style.display="none !important";var o,d=ezoGetSlotNum(i.id);if(o=void 0!==__ez.fads?__ez.fads.initslots[i.id]:__ez_fad_initslot[i.id],void 0===d&&"function"==typeof o&&(d=o(6)),void 0!==d)var n=window[d];if(void 0!==n){n.setTargeting("compid","0"),n.setTargeting("bkfl","1"),n.setTargeting("reft","t");var a=n.getTargeting("br2")[0];void 0!==window.ezoibfh&&void 0!==window.ezoibfh[a]&&(n.setTargeting("br1",a),n.setTargeting("eb_br",window.ezoibfh[a])),googletag.display(n),setTimeout((function(){googletag.pubads().refresh([n])}),500)}},window.ezoSTPixels=[];var e=setInterval((function(){"undefined"!=typeof __ez&&"undefined"!=typeof __ezDotData&&"undefined"!=typeof ezslots&&window.ezslots_raw.length>0&&(window.ezoSTPixelFire(),clearInterval(e))}),250);window.ezoSTPixelAdd=function(e,t,i){window.ezoSTPixels.push({id:e,name:t,value:i}),window.ezoSTPixelFire()},window.ezoGetSlotById=function(e){var t=e.split("div-gpt-ad-")[1].split("-",3).join("-");for(var i in window.ezslots_raw)if(window.ezslots_raw[i].tap.includes(t))return window.ezslots_raw[i]},window.ezoGetSlotNum=function(e){if(void 0!==window.ezslots&&0!=window.ezslots)for(var t=0;t<window.ezslots.length;t++){var i=window[ezslots[t]];if(void 0!==i){var o=i.getSlotElementId();if(void 0!==o&&o==e)return ezslots[t]}}},window.ezoSTPixelFire=function(){if("undefined"!=typeof __ez&&"undefined"!=typeof __ezDotData&&"undefined"!=typeof ezslots)for(;window.ezoSTPixels.length>0;){var e=window.ezoSTPixels.shift(),t=window.ezoGetSlotById(e.id);if(void 0===t){var i;if(i=void 0!==__ez.fads?__ez.fads.initslots[e.id]:__ez_fad_initslot[e.id],void 0===googletag.defineSlot)return void window.ezoSTPixels.push(e);if(i(1),void 0===(t=window.ezoGetSlotById(e.id)))return void window.ezoSTPixels.push(e)}var o=[{type:"impression",impression_id:t.eid,domain_id:window.did.toString(),unit:e.id,t_epoch:__ez.dot.getEpoch(0),ad_position:parseInt(t.ap),country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:1,data:__ez.dot.dataToStr([new __ezDotData(e.name,e.value.toString())]),is_orig:0}],d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig=0&sts="+btoa(JSON.stringify(o));__ez.dot.Fire(d)}}}();</script>
+<script>!function(){var e=setInterval((function(){var t=document.querySelectorAll('[id^="outbrain_widget_"]');0!==t.length&&(function(e){e.forEach((function(e){if(e.parentElement.hasAttribute("data-ez-name")){var t=e.parentElement.attributes["data-ez-name"].value;new IntersectionObserver((function(e,i){e[0].isIntersecting&&(n({unit:t,name:"viewed"}),i.disconnect())}),{threshold:[1]}).observe(e);var i=e.attributes["data-widget-id"].value;window.OBREvents=window.OBREvents||[],OBREvents.push({event:"widgetDataReturned",widgetId:i,func:function(){n({unit:t,name:"loaded"})}})}}))}(t),clearInterval(e))}),250),t=[],i=setInterval((function(){"undefined"!=typeof __ez&&"undefined"!=typeof _ezim_d&&"undefined"!=typeof __ezDotData&&(o(),clearInterval(i))}),2500);function n(e){t.push(e),o()}var d="/porpoiseant/army.gif";function o(){var e,i;if(0!==t.length&&"undefined"!=typeof __ez&&"undefined"!=typeof _ezim_d&&"undefined"!=typeof __ezDotData)for(;t.length>0;){var n=t.shift(),o=(e=n.unit,i=n.name,[{type:"impression",impression_id:_ezim_d[e].full_id.split("/")[2],domain_id:window.did.toString(),unit:e,t_epoch:__ez.dot.getEpoch(0),ad_position:_ezim_d[e].position_id,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:2,data:__ez.dot.dataToStr([new __ezDotData(i,"1")]),is_orig:0}]),a=__ez.dot.getURL(d)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&sts="+btoa(JSON.stringify(o));void 0!==window.ezWp&&ezWp&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("visit_uuid")&&(a+="&visit_uuid="+window.visit_uuid),__ez.dot.Fire(a)}}}();</script>
+<script>window.ezhbopt=true;</script>
+<script>window.ezpbCache=true;</script>
+<link href="//ad.doubleclick.net" rel="dns-prefetch">
+<link href="//pagead2.googlesyndication.com" rel="dns-prefetch">
+<link href="//googleads.g.doubleclick.net" rel="dns-prefetch">
+<link href="//tpc.googlesyndication.com" rel="dns-prefetch">
+<link href="//adservice.google.com" rel="dns-prefetch">
+<link href="//secureads.g.doubleclick.net" rel="dns-prefetch">
+<link href="//www.googletagservices.com" rel="dns-prefetch">
+<link rel='preload' as='script' href='//securepubads.g.doubleclick.net/tag/js/gpt.js'>
+<link rel='preload' as='script' href='//go.ezodn.com/hb/dall.js?cb=195-1-56' onerror="window.ezDallErr=true">
+<link rel='preload' as='script' href='/porpoiseant/fads.js?gcb=195-1&cb=11'>
+<script type="text/javascript">
+	var __banger_pmp_deals=function(){var d={};return[{"SlotName":"/1254144,22284635885/sebhastian_com-box-4","Deals":[]},{"SlotName":"/1254144,22284635885/sebhastian_com-large-leaderboard-2","Deals":[]},{"SlotName":"/1254144,22284635885/sebhastian_com-leader-1","Deals":[]},{"SlotName":"/1254144,22284635885/sebhastian_com-medrectangle-3","Deals":[]},{"SlotName":"/1254144,22284635885/sebhastian_com-large-billboard-2","Deals":[]},{"SlotName":"/1254144,22284635885/sebhastian_com-large-mobile-banner-1","Deals":[]},{"SlotName":"/1254144,22284635885/sebhastian_com-large-mobile-banner-2","Deals":[]},{"SlotName":"/1254144,22284635885/sebhastian_com-medrectangle-2","Deals":[]},{"SlotName":"/1254144,22284635885/sebhastian_com-box-1","Deals":[]},{"SlotName":"/1254144,22284635885/sebhastian_com-large-mobile-banner-1","Deals":[]}]}();
+</script>
+<script type='text/javascript'>_ebcids=[138231308856,138231308940,138231308949,138231387842,138231421744,138231421759,138231421774,138231421783,138231421789,138231421792,138242067587,138242067590,138242067602,138242067605,138242067608,138242067614,138242229406,138242229415,138242229421,138242229430];</script>
+<script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>ezobv=228;</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>__ez.fads=window.__ez.fads||{cmd:[],initslots:{},kvStore:{},divs:[[],[],[],[],[],[],[]],divsd:[],fadcount:0};var ez_ad_units=[];var ezslots=[];var ezrpos=[];var ezsrqt={};var __ez_fad_haspo=false;var __ez_fad_hascp=false;if(typeof PerformanceObserver!='undefined'&&typeof PerformanceObserver.supportedEntryTypes!='undefined'){if(PerformanceObserver.supportedEntryTypes.indexOf('largest-contentful-paint')>-1){__ez_fad_haspo=true;}}
+try{var __ez_fad_po=new PerformanceObserver((entryList)=>{window.__ez_fad_hascp=true;__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_hascp=true;});});__ez_fad_po.observe({type:'largest-contentful-paint',buffered:true});}catch(e){}
+var __ez_fad_floatshowd=false;__ez.fads.__ez_fad_floatshow=function(d){if(__ez_fad_floatshowd===true||typeof __ez_fad_floating==='undefined'){return;}
+__ez_fad_floatshowd=true;var e=document.getElementById('ezmobfooter');if(e!=null){e.classList.add('ezmobtrans');}else{var head=document.head||document.getElementsByTagName('head')[0],style=document.createElement('style');head.appendChild(style);var css="body > #ezmobfooter{bottom:0px;visibility:visible;}";style.type='text/css';if(style.styleSheet){style.styleSheet.cssText=css;}else{style.appendChild(document.createTextNode(css));}}
+googletag.cmd.push(function(){for(var i=0;i<__ez_fad_floating.length;i++){var s=__ez.fads.initslots[__ez_fad_floating[i]](null);googletag.display(__ez_fad_floating[i]);if(typeof window.adjustHbValues==='function'){window.adjustHbValues(window[s]);}
+if(typeof window.__ezWillLoadCnx!=='undefined'&&window[s].getTargeting('al')[0]=='1039'){window.__ezsbwcmd=window.__ezsbwcmd||[];let sr=[window[s]];window.__ezsbwcmd.push(function(){if(typeof __ezcnxPlayer==='undefined'||!__ezcnxPlayer.getSize()){googletag.pubads().refresh(sr);}else{__ezcnxPlayer.once('removed',function(){googletag.pubads().refresh(sr);})}});continue;}
+if(typeof window.__ezwfhb!=='undefined'){function ezChkWfhb(x){if(typeof isHbFinished!=='undefined'&&isHbFinished){googletag.pubads().refresh(x);}
+else{setTimeout(()=>{ezChkWfhb(x);},50);}}
+ezChkWfhb([window[s]]);}
+else{googletag.pubads().refresh([window[s]]);}}});};function __ez_fad_csnt(){return document.cookie.indexOf('ezCMPCookieConsent')!==-1||typeof __ez_conestreq=='undefined';}
+function __ez_fad_rdy(){var h=document.documentElement.scrollHeight;var vh=window.innerHeight||Math.max(document.documentElement.clientHeight,document.body.clientHeight);if(document.body!==null&&(__ez_fad_haspo===false&&h>vh||__ez_fad_hascp||document.readyState==='complete')){return true;}}
+function __ez_fad_position(id){if(__ez.fads.loaded){__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_position(id);});return;}
+__ez.fads.fadcount++;var did=document.getElementById(id);if(did===null){return;}
+var rect=did.getBoundingClientRect();var vs=window.scrollY||document.body.scrollTop||document.documentElement.scrollTop;var vh=vs+window.screen.height;var vw=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;var vh=window.innerHeight||Math.max(document.documentElement.clientHeight,document.body.clientHeight);if(rect.top>=vh){__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_position(id);});return;}
+__ez.fads.divs[0].push(id);__ez.fads.divsd.push(id);if(!__ez_fad_csnt()||!__ez_fad_rdy()){setTimeout(function(){__ez_fad_display(id);},50);return;}
+__ez_fad_display(id);}
+function __ez_fad_display(id){if(!__ez_fad_csnt()||!__ez_fad_rdy()){setTimeout(function(){__ez_fad_display(id);},50);return;}
+__ez_fad_gpt();if(__ez_fad_floating.indexOf(id)!==-1){setTimeout(__ez.fads.__ez_fad_floatshow,0);return;}
+googletag.cmd.push(function(){var sn=__ez.fads.initslots[id](0);if(!sn){return;}
+var s=window[sn];googletag.display(id);if(typeof window.ezasBuild==='function'){if(window.ezasBuild(s)){return;}}
+if(typeof window.adjustHbValues==='function'){window.adjustHbValues(s);}
+if(typeof window.__ezwfhb!=='undefined'){function ezChkWfhb(){if(typeof isHbFinished!=='undefined'&&isHbFinished){googletag.pubads().refresh([s]);}
+else{setTimeout(ezChkWfhb,50);}}
+ezChkWfhb();}
+else{googletag.pubads().refresh([s]);}});}
+function ezSetTargetingFromMap(slot,obj){if(typeof slot==='undefined'){return;}
+for(var key in obj){if(!obj.hasOwnProperty(key)){continue;}
+slot.setTargeting(key,obj[key]);}}
+function ezSetSlotTargeting(divid,key,value){var slot=ezGetSlotById(divid);if(slot){slot.setTargeting(key,value);}else{if(typeof __ez.fads.kvStore[divid]=='undefined'){__ez.fads.kvStore[divid]={};}
+__ez.fads.kvStore[divid][key]=value;}}
+function ezGetSlotById(id){if(typeof window.ezslots==='undefined'||window.ezslots==0){return;}
+for(var i=0;i<window.ezslots.length;i++){var slot=window[ezslots[i]];if(typeof slot==='undefined'){continue;}
+var slotId=slot.getSlotElementId();if(typeof slotId!=='undefined'&&slotId==id){return slot;}}}
+function __ez_close_anchor(){googletag.cmd.push(function(slot){for(var i=0;i<window.ezslots.length;i++){var slot=window[ezslots[i]];if(typeof slot==='undefined'){continue;}
+var alS=slot.getTargeting('al')[0]%1000;if(alS==5){googletag.destroySlots([slot]);}}
+if(typeof window.ezdomain!=='undefined'){var d=new Date();d.setTime(d.getTime()+(2*60*60*1000));var expires="expires="+d.toGMTString();let cookie="ez_anchor_closed=true;domain=."+ezdomain+';'+expires+"; path=/";document.cookie=cookie;}
+if(typeof(__ez_set_outstream_floor)!=='undefined'){__ez_set_outstream_floor(0);}
+var anchor=document.getElementById('ezmobfooter');if(!anchor){return;}
+anchor.innerHTML='';anchor.style.paddingTop=0;var styleElement=document.getElementById('ezoicCSS');if(!styleElement){return;}
+var cert=document.getElementById('ezoic-certification-fixed');if(cert){cert.style.bottom='15px';}
+var styles=styleElement.sheet?styleElement.sheet:styleElement.styleSheet;for(var i=0;i<styles.cssRules.length;i++){var rules=styles.cssRules[i];if(rules.selectorText==='body'&&rules.style.height==='auto'&&(rules.style.paddingTop!==''||rules.style.paddingBottom!=='')){styles.deleteRule(i);}}});}</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.isEZABL=false;window.ezmadspc=300;window.ezoViewCheck=false;</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.ezDisableInitialLoad=false;</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.googletag=window.googletag||{};googletag.cmd=googletag.cmd||[];</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.ezogetbrkey = function(s){ var k = 'br1';var k2 = 'eb_br';if(window.ezogtk == ""){k='br1u';k2='eb_bru';}else if(window.ezogtk != "NT"){k='br1t';k2='eb_brt';} s.setTargeting('br1', s.getTargeting(k));s.setTargeting('eb_br', s.getTargeting(k2));};googletag.cmd.push(function() {ezslot_interstitial = googletag.defineOutOfPageSlot('/1254144,22284635885/sebhastian_com-pixel1',googletag.enums.OutOfPageFormat.INTERSTITIAL); if(ezslot_interstitial != null) {ezslot_interstitial.addService(googletag.pubads()).setTargeting('br1', '12').setTargeting('ga', '2497208').setTargeting('iid1', '1034857514797738').setTargeting('bra', 'mod1').setTargeting('d', '246135').setTargeting('reft', 'n').setTargeting('br2', '8').setTargeting('tap', 'sebhastian_com-pixel1-1034857514797738').setTargeting('ap', '9999').setTargeting('ic', '1').setTargeting('ezoic', '1').setTargeting('avc', '8').setTargeting('eb_br', '14e8a85d4c42ff1db8790cbef9e33493').setTargeting('bvr', '8').setTargeting('al', '1006');}
+			googletag.pubads().enableSingleRequest();googletag.pubads().addEventListener('slotRenderEnded', function(event) { __ez.queue.addFunc("ezbanger", "ezbanger", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('impressionViewable', function(event) { __ez.queue.addFunc("ezvb", "ezvb", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('slotResponseReceived', function(event) { __ez.queue.addFunc("ezsr", "ezsr", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('slotRequested', function(e) { window.ezsrqt[e.slot.getSlotElementId()] = Date.now();});googletag.pubads().disableInitialLoad();googletag.pubads().enableLazyLoad({fetchMarginPercent: 300, renderMarginPercent: 50, mobileScaling: 2.0});googletag.enableServices();});window.ezoll = false;window.ezoadxnc = '1254144';window.ezoadhb = '12';var ezaxmns={};var ezaucmns={};
+
+		var __ez_fad_floating = ['div-gpt-ad-sebhastian_com-medrectangle-2-0'];
+		var __ez_fad_gptd = __ez_fad_gptd || false;var __ez_fad_ezpbinitd = false;var __ez_fad_pbt = setTimeout(function(){__ez_fad_pb();},5000);function __ez_fad_gpt(){if(__ez_fad_gptd == false){__ez_fad_gptd=true;!function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//securepubads.g.doubleclick.net/tag/js/gpt.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(t,c)}();}}function __ez_fad_pb(){if(__ez_fad_ezpbinitd==false && typeof __ez_fad_ezpbinit == 'function'){__ez_fad_ezpbinitd = true;__ez_fad_ezpbinit()}};
+		
+	function __ez_init_slot(bvr, did, slotNum, defineFunc) {
+		googletag.cmd.push(function() {
+			defineFunc();
+			ezrpos[slotNum]=slotNum;
+			ezslots.push("ezslot_" + slotNum);
+			if(__ez.fads.kvStore[did] !== 'undefined') {
+				for (var name in __ez.fads.kvStore[did]) {
+					if (!__ez.fads.kvStore.hasOwnProperty(name)) {
+						ezSetSlotTargeting(did, name, __ez.fads.kvStore[did][name]);
+					}
+				}
+				__ez.fads.kvStore[did] = {};
+			}
+		});return "ezslot_" + slotNum;
+	}
+__ez.fads.initslots['div-gpt-ad-sebhastian_com-leader-1-0'] = function(bvr){
+				var defScript = function() {ezslot_0 = googletag.defineSlot('/1254144,22284635885/sebhastian_com-leader-1',[[728,90],[320,50],[468,60],[234,60],['fluid']],'div-gpt-ad-sebhastian_com-leader-1-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_0_raw = {'a':'1','iid1':'3118697462765008','eid':'3118697462765008','t':'134','d':'246135','t1':'134','pvc':'1','ap':'1137','sap':'1137','a':'|0|','as':'revenue','plat':'1','bra':'mod1','ic':'1','at':'mbf','adr':'398','ezosn':'0','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'37','al':'1037','compid':'0','tap':'sebhastian_com-leader-1-3118697462765008','eb_br':'60474211daf1dfd4d90000ea01f56c30','eba':'1','ebss':[10017,10082,10061,10015,10063,11307],'asau':'1478621758','bv':'38','bvm':'4','bvr':'0','avc':'8','shp':'1','ftsn':'12','ftsng':'12','br1':'0','br2':'0','ezoic':'1','nmau':'0','mau':'0','stl':[77,193,0,67,0,193,153,20,71,201,192,31,902,903,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,4184,4185,4186,4276,2030,4312,774,5022,5534,2030],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_0_raw);ezSetTargetingFromMap(ezslot_0,ezslot_0_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-sebhastian_com-leader-1-0',0, defScript);
+			};__ez.fads.initslots['div-gpt-ad-sebhastian_com-box-1-0'] = function(bvr){
+				var defScript = function() {ezslot_8 = googletag.defineSlot('/1254144,22284635885/sebhastian_com-box-1',[336,280],'div-gpt-ad-sebhastian_com-box-1-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_8_raw = {'a':'1','iid1':'4415221946765607','eid':'4415221946765607','t':'134','d':'246135','t1':'134','pvc':'1','ap':'1106','sap':'1106','a':'|0|','as':'revenue','plat':'1','bra':'mod1','ic':'1','at':'mbf','adr':'398','ezosn':'8','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'0','al':'1000','compid':'0','tap':'sebhastian_com-box-1-4415221946765607','eb_br':'60474211daf1dfd4d90000ea01f56c30','eba':'1','ebss':[10017,10082,10061,10015,10063,11307],'asau':'1478621758','bv':'38','bvm':'4','bvr':'0','avc':'5','shp':'2','ftsn':'12','ftsng':'12','acptad':'1','br1':'0','br2':'0','ezoic':'1','nmau':'0','mau':'0','stl':[63,14,28,4,51,0,88,0,71,30,0,31,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,4184,4185,4186,4276,2030,4312,774,5022,5534,2030],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_8_raw);ezSetTargetingFromMap(ezslot_8,ezslot_8_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-sebhastian_com-box-1-0',8, defScript);
+			};__ez.fads.initslots['div-gpt-ad-sebhastian_com-medrectangle-2-0'] = function(bvr){
+				var defScript = function() {ezslot_3 = googletag.defineSlot('/1254144,22284635885/sebhastian_com-medrectangle-2',[728,90],'div-gpt-ad-sebhastian_com-medrectangle-2-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_3_raw = {'a':'1','iid1':'5514479504765753','eid':'5514479504765753','t':'134','d':'246135','t1':'134','pvc':'1','ap':'1100','sap':'1100','a':'|0|','as':'revenue','plat':'1','bra':'mod1','ic':'1','at':'mbf','adr':'398','ezosn':'3','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'5','al':'1005','compid':'0','tap':'sebhastian_com-medrectangle-2-5514479504765753','eb_br':'14e8a85d4c42ff1db8790cbef9e33493','eba':'1','ebss':[10017,10082,10061,10015,10063,11307],'asau':'1478621758','bv':'24','bvm':'0','bvr':'2','avc':'9','shp':'1','ftsn':'12','ftsng':'12','br1':'12','br2':'6','ezoic':'1','nmau':'0','mau':'0','stl':[77,193,0,192,0,131,196,0,192,209,187,0,901,182,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,4184,4185,4186,4276,2030,4312,774,5022,5534,2030],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_3_raw);ezSetTargetingFromMap(ezslot_3,ezslot_3_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-sebhastian_com-medrectangle-2-0',3, defScript);
+			};__ez.fads.initslots['div-gpt-ad-sebhastian_com-large-mobile-banner-2-0'] = function(bvr){
+				var defScript = function() {ezslot_7 = googletag.defineSlot('/1254144,22284635885/sebhastian_com-large-mobile-banner-2',[300,250],'div-gpt-ad-sebhastian_com-large-mobile-banner-2-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_7_raw = {'a':'1','iid1':'7457934026801903','eid':'7457934026801903','t':'134','d':'246135','t1':'134','pvc':'1','ap':'1161','sap':'1161','a':'|0|','as':'revenue','plat':'1','bra':'mod1','ic':'1','at':'mbf','adr':'398','ezosn':'7','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'703','al':'1703','compid':'0','tap':'sebhastian_com-large-mobile-banner-2-7457934026801903','eb_br':'60474211daf1dfd4d90000ea01f56c30','eba':'1','ebss':[10017,10082,10061,10015,10063,11307],'asau':'1478621758','bv':'38','bvm':'4','bvr':'0','avc':'17','shp':'1','ftsn':'12','ftsng':'12','br1':'0','br2':'0','ezoic':'1','nmau':'0','mau':'0','stl':[157,193,0,153,0,193,153,20,71,201,192,31,902,903,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,4184,4185,4186,4276,2030,4312,774,5022,5534,2030],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_7_raw);ezSetTargetingFromMap(ezslot_7,ezslot_7_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-sebhastian_com-large-mobile-banner-2-0',7, defScript);
+			};__ez.fads.initslots['div-gpt-ad-sebhastian_com-large-leaderboard-2-0'] = function(bvr){
+				var defScript = function() {ezslot_4 = googletag.defineSlot('/1254144,22284635885/sebhastian_com-large-leaderboard-2',[[336,280],[320,50],[468,60],[234,60],[728,90],['fluid']],'div-gpt-ad-sebhastian_com-large-leaderboard-2-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_4_raw = {'a':'1','iid1':'4081019510774548','eid':'4081019510774548','t':'134','d':'246135','t1':'134','pvc':'1','ap':'1133','sap':'1133','a':'|0|','as':'revenue','plat':'1','bra':'mod1','ic':'1','at':'mbf','adr':'398','ezosn':'4','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'36','al':'1036','compid':'0','tap':'sebhastian_com-large-leaderboard-2-4081019510774548','eb_br':'60474211daf1dfd4d90000ea01f56c30','eba':'1','ebss':[10017,10082,10061,10015,10063,11307],'asau':'1478621758','bv':'38','bvm':'4','bvr':'0','avc':'8','shp':'1','ftsn':'12','ftsng':'12','br1':'0','br2':'0','ezoic':'1','nmau':'0','mau':'0','stl':[157,131,0,192,0,131,196,0,192,209,187,0,901,182,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,4184,4185,4186,4276,2030,4312,774,5022,5534,2030],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_4_raw);ezSetTargetingFromMap(ezslot_4,ezslot_4_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-sebhastian_com-large-leaderboard-2-0',4, defScript);
+			};__ez.fads.initslots['div-gpt-ad-sebhastian_com-large-billboard-2-0'] = function(bvr){
+				var defScript = function() {ezslot_2 = googletag.defineSlot('/1254144,22284635885/sebhastian_com-large-billboard-2',[[250,250],[234,60],[300,250],[320,100],[200,200],[125,125],[336,280],[320,50],[120,240],[180,150],['fluid']],'div-gpt-ad-sebhastian_com-large-billboard-2-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_2_raw = {'a':'1','iid1':'7361528574805460','eid':'7361528574805460','t':'134','d':'246135','t1':'134','pvc':'1','ap':'1160','sap':'1160','a':'|0|','as':'revenue','plat':'1','bra':'mod1','ic':'1','at':'mbf','adr':'398','ezosn':'2','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'34','al':'1034','compid':'0','tap':'sebhastian_com-large-billboard-2-7361528574805460','eb_br':'14e8a85d4c42ff1db8790cbef9e33493','eba':'1','ebss':[10017,10082,10061,10015,10063,11307],'asau':'1478621758','bv':'38','bvm':'4','bvr':'0','avc':'18','shp':'3','ftsn':'12','ftsng':'12','br1':'12','br2':'6','ezoic':'1','nmau':'0','mau':'0','stl':[157,193,0,153,0,193,153,20,71,201,192,31,902,903,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,4184,4185,4186,4276,2030,4312,774,5022,5534,2030],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_2_raw);ezSetTargetingFromMap(ezslot_2,ezslot_2_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-sebhastian_com-large-billboard-2-0',2, defScript);
+			};__ez.fads.initslots['div-gpt-ad-sebhastian_com-large-mobile-banner-1-0'] = function(bvr){
+				var defScript = function() {ezslot_5 = googletag.defineSlot('/1254144,22284635885/sebhastian_com-large-mobile-banner-1',[[250,250], ['fluid']],'div-gpt-ad-sebhastian_com-large-mobile-banner-1-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_5_raw = {'a':'1','iid1':'3043388404772459','eid':'3043388404772459','t':'134','d':'246135','t1':'134','pvc':'1','ap':'1172','sap':'1172','a':'|0|','as':'revenue','plat':'1','bra':'mod1','ic':'1','at':'mbf','adr':'398','ezosn':'5','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'706','al':'1706','compid':'0','tap':'sebhastian_com-large-mobile-banner-1-3043388404772459','eb_br':'60474211daf1dfd4d90000ea01f56c30','eba':'1','ebss':[10017,10082,10061,10015,10063,11307],'asau':'1478621758','bv':'38','bvm':'4','bvr':'0','avc':'9','shp':'3','ftsn':'12','ftsng':'12','br1':'0','br2':'0','ezoic':'1','nmau':'2','mau':'0','stl':[77,131,0,192,0,131,196,0,192,209,187,0,901,182,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,4184,4185,4186,4276,2030,4312,774,5022,5534,2030],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_5_raw);ezSetTargetingFromMap(ezslot_5,ezslot_5_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-sebhastian_com-large-mobile-banner-1-0',5, defScript);
+			};__ez.fads.initslots['div-gpt-ad-sebhastian_com-large-mobile-banner-1-0_1'] = function(bvr){
+				var defScript = function() {ezslot_6 = googletag.defineSlot('/1254144,22284635885/sebhastian_com-large-mobile-banner-1',[[250,250], ['fluid']],'div-gpt-ad-sebhastian_com-large-mobile-banner-1-0_1').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_6_raw = {'a':'1','iid1':'3043388404772459','eid':'3043388404772459','t':'134','d':'246135','t1':'134','pvc':'1','ap':'1172','sap':'1172','a':'|0|','as':'revenue','plat':'1','bra':'mod1','ic':'1','at':'mbf','adr':'398','ezosn':'6','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'706','al':'1706','compid':'0','tap':'sebhastian_com-large-mobile-banner-1-3043388404772459','eb_br':'60474211daf1dfd4d90000ea01f56c30','eba':'1','ebss':[10017,10082,10061,10015,10063,11307],'asau':'1478621758','bv':'38','bvm':'4','bvr':'0','avc':'9','shp':'3','ftsn':'12','ftsng':'12','br1':'0','br2':'0','ezoic':'1','nmau':'2','mau':'1','stl':[157,193,0,153,0,193,153,20,71,201,192,31,902,903,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,4184,4185,4186,4276,2030,4312,774,5022,5534,2030],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_6_raw);ezSetTargetingFromMap(ezslot_6,ezslot_6_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-sebhastian_com-large-mobile-banner-1-0_1',6, defScript);
+			};__ez.fads.initslots['div-gpt-ad-sebhastian_com-medrectangle-3-0'] = function(bvr){
+				var defScript = function() {ezslot_9 = googletag.defineSlot('/1254144,22284635885/sebhastian_com-medrectangle-3',[250,250],'div-gpt-ad-sebhastian_com-medrectangle-3-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_9_raw = {'a':'1','iid1':'4094340970781086','eid':'4094340970781086','t':'134','d':'246135','t1':'134','pvc':'1','ap':'1170','sap':'1170','a':'|0|','as':'revenue','plat':'1','bra':'mod1','ic':'1','at':'mbf','adr':'398','ezosn':'9','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'21','al':'1021','compid':'0','tap':'sebhastian_com-medrectangle-3-4094340970781086','eb_br':'14e8a85d4c42ff1db8790cbef9e33493','eba':'1','ebss':[10017,10082,10061,10015,10063,11307],'asau':'1478621758','bv':'12','bvm':'0','bvr':'2','avc':'24','shp':'1','ftsn':'12','ftsng':'12','br1':'12','br2':'6','ezoic':'1','nmau':'0','mau':'0','stl':[77,193,0,192,0,131,196,0,192,209,187,0,901,182,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,4184,4185,4186,4276,2030,4312,774,5022,5534,2030],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_9_raw);ezSetTargetingFromMap(ezslot_9,ezslot_9_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-sebhastian_com-medrectangle-3-0',9, defScript);
+			};__ez.fads.initslots['div-gpt-ad-sebhastian_com-box-4-0'] = function(bvr){
+				var defScript = function() {ezslot_1 = googletag.defineSlot('/1254144,22284635885/sebhastian_com-box-4',[[250,250],[728,90],[320,50],[468,60],[234,60],['fluid']],'div-gpt-ad-sebhastian_com-box-4-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_1_raw = {'a':'1','iid1':'9065751924793348','eid':'9065751924793348','t':'134','d':'246135','t1':'134','pvc':'1','ap':'1162','sap':'1162','a':'|0|','as':'revenue','plat':'1','bra':'mod1','ic':'1','at':'mbf','adr':'398','ezosn':'1','reft':'tf','refs':'30','refa':'1','ga':'2497208','gala':'','rid':'99998','pt':'3','al':'1003','compid':'0','tap':'sebhastian_com-box-4-9065751924793348','eb_br':'60474211daf1dfd4d90000ea01f56c30','eba':'1','ebss':[10017,10082,10061,10015,10063,11307],'asau':'1478621758','bv':'38','bvm':'4','bvr':'0','avc':'9','shp':'1','ftsn':'12','ftsng':'12','br1':'0','br2':'0','ezoic':'1','nmau':'0','mau':'0','stl':[157,193,0,153,0,193,153,20,71,201,192,31,902,903,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,4184,4185,4186,4276,2030,4312,774,5022,5534,2030],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_1_raw);ezSetTargetingFromMap(ezslot_1,ezslot_1_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-sebhastian_com-box-4-0',1, defScript);
+			};</script>
+<script type="text/ez-screx">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script data-ezscrex="false" data-cfasync="false">__ez.ssaf=[17,19,16];__ez.sswp=4;__ez.ssv=604512;__ez.sshsdef=true;</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">var _ezaq = {"ab_test_id":"mod1","ad_cache_level":1,"ad_count_adjustment":1,"ad_lazyload_version":6,"ad_load_version":1,"ad_location_ids":"6,37,3,34,5,36,706,706,703,0,21","adx_ad_count":10,"bidder_method":1,"bidder_version":5,"city":"Chennai","country":"IN","days_since_last_visit":-1,"display_ad_count":8,"domain_id":246135,"domain_test_group":20230808,"ds_adsize_opt_id":-1,"engaged_time_visit":119,"ezcache_level":2,"ezcache_skip_code":0,"form_factor_id":1,"framework_id":1,"has_bad_image":0,"has_bad_words":0,"iab_category":"","is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":1,"last_page_load":"1684678551880","last_pageview_id":"68faafc3-4784-4eb7-6fcc-85d0d488445c","lt_cache_level":0,"max_ads":7,"metro_code":0,"optimization_version":1,"page_ad_positions":"1006,1100,1106,1133,1137,1160,1161,1162,1170,1172,1172","page_view_count":1,"page_view_id":"202fd0dc-b305-46b8-4886-910947b530fb","position_selection_id":0,"postal_code":"600042","pv_event_count":0,"response_size_orig":24646,"response_time_orig":6,"serverid":"i-07b7d3756e23aae56","state":"TN","sub_page_ad_positions":"1006,1100,1106,1133,1137,1160,1161,1162,1170,1172,1172","t_epoch":1684679090,"template_id":134,"time_on_site_visit":609,"url":"https://sebhastian.com/find-largest-number-array-javascript/","user_id":0,"word_count":838,"worst_bad_word_level":0};var _ezim_d = {"sebhastian_com-box-1":{"adsense_stat_source_id":5,"adx_ad_count":10,"adx_stat_source_id":35,"full_id":"sebhastian_com-box-1/2023-05-21/4415221946765607","height":"280","position_id":1106,"sub_position_id":1106,"width":"336"},"sebhastian_com-box-4":{"adsense_stat_source_id":5,"adx_ad_count":10,"adx_stat_source_id":35,"full_id":"sebhastian_com-box-4/2023-05-21/9065751924793348","height":"250","position_id":1162,"sub_position_id":1162,"width":"250"},"sebhastian_com-large-billboard-2":{"adsense_stat_source_id":5,"adx_ad_count":10,"adx_stat_source_id":35,"full_id":"sebhastian_com-large-billboard-2/2023-05-21/7361528574805460","height":"250","position_id":1160,"sub_position_id":1160,"width":"250"},"sebhastian_com-large-leaderboard-2":{"adsense_stat_source_id":5,"adx_ad_count":10,"adx_stat_source_id":35,"full_id":"sebhastian_com-large-leaderboard-2/2023-05-21/4081019510774548","height":"280","position_id":1133,"sub_position_id":1133,"width":"336"},"sebhastian_com-large-mobile-banner-1":{"adsense_stat_source_id":5,"adx_ad_count":10,"adx_stat_source_id":35,"full_id":"sebhastian_com-large-mobile-banner-1/2023-05-21/3043388404772459","position_id":1172,"sub_position_id":1172},"sebhastian_com-large-mobile-banner-1_1":{"adsense_stat_source_id":5,"adx_ad_count":10,"adx_stat_source_id":35,"full_id":"sebhastian_com-large-mobile-banner-1/2023-05-21/3043388404772459","position_id":1172,"sub_position_id":1172},"sebhastian_com-large-mobile-banner-2":{"adsense_stat_source_id":5,"adx_ad_count":10,"adx_stat_source_id":35,"full_id":"sebhastian_com-large-mobile-banner-2/2023-05-21/7457934026801903","height":"250","position_id":1161,"sub_position_id":1161,"width":"300"},"sebhastian_com-leader-1":{"adsense_stat_source_id":5,"adx_ad_count":10,"adx_stat_source_id":35,"full_id":"sebhastian_com-leader-1/2023-05-21/3118697462765008","height":"90","position_id":1137,"sub_position_id":1137,"width":"728"},"sebhastian_com-medrectangle-2":{"adsense_stat_source_id":5,"adx_ad_count":10,"adx_stat_source_id":35,"full_id":"sebhastian_com-medrectangle-2/2023-05-21/5514479504765753","height":"90","position_id":1100,"sub_position_id":1100,"width":"728"},"sebhastian_com-medrectangle-3":{"adsense_stat_source_id":5,"adx_ad_count":10,"adx_stat_source_id":35,"full_id":"sebhastian_com-medrectangle-3/2023-05-21/4094340970781086","height":"250","position_id":1170,"sub_position_id":1170,"width":"250"},"sebhastian_com-pixel1":{"adsense_stat_source_id":5,"adx_ad_count":10,"adx_stat_source_id":35,"full_id":"sebhastian_com-pixel1/2023-05-21/1034857514797738","height":"3","position_id":1006,"sub_position_id":1006,"width":"3"}};var _ezat = {"domain_id":246135,"form_factor_id":1,"framework_id":1,"pageview_date":"2023-05-21","pageview_id":"202fd0dc-b305-46b8-4886-910947b530fb","template_id":134,"url":"https://sebhastian.com/find-largest-number-array-javascript/","visit_uuid":"81e5d14f-f6f3-4ae2-6fc5-c9e53b8059db"};</script><script data-ezscrex="false" data-pagespeed-no-defer data-cfasync="false" type="text/javascript">__ez.queue.addFile('banger.js', '/porpoiseant/banger.js?cb=195-1&bv=228&v=74&PageSpeed=off', true, [], true, false, false, true);</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer></script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>How to find the largest number in a JavaScript array | sebhastian</title>
+  <meta name="author" content="Nathan Sebhastian"/>
+  <meta name="description" content="Let&#39;s learn how to find the largest number in a JavaScript array"/>
+  <link rel="canonical" href="https://sebhastian.com/find-largest-number-array-javascript/"/>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <link rel="shortcut icon" type="img/ico" href="/favicon.ico"/>
+  <meta name="theme-color" content="#0c447c"/>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="Sebhastian"/>
+  <meta property="og:title" content="How to find the largest number in a JavaScript array"/>
+  <meta property="og:description" content="Let&#39;s learn how to find the largest number in a JavaScript array"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://sebhastian.com/find-largest-number-array-javascript/"/>
+  <meta property="og:image" content="https://sebhastian.com/img/banner.png"/>
+  <meta name="twitter:title" content="How to find the largest number in a JavaScript array"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@nsebhastian"/>
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "articleSection": "posts",
+      "name": "How to find the largest number in a JavaScript array",
+      "headline": "How to find the largest number in a JavaScript array",
+      "description": "Let\u0027s learn how to find the largest number in a JavaScript array",
+      "inLanguage":"en-US",
+      "isFamilyFriendly": "true",
+      "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://sebhastian.com/find-largest-number-array-javascript/"
+      },
+      "author" : {
+          "@type": "Person",
+          "name": "Nathan Sebhastian",
+          "url": "https://sebhastian.com/nathan",
+          "image": {
+               "@type": "ImageObject",
+              "inLanguage": "en-US",
+               "url": "https://sebhastian.com/img/nathan-sebhastian.png",
+               "caption": "Nathan"
+          }
+      },
+      "datePublished": "2021-07-09T15:00:00.00Z",
+      "dateModified": "2021-07-09T15:00:00.00Z",
+      "publisher":{
+      "@type":"Organization",
+      "name": "sebhastian",
+      "url": "https://sebhastian.com/",
+      "logo": {
+          "@type": "ImageObject",
+          "url": "https://sebhastian.com/img/logo-sebhastian.png",
+          "width":"485",
+          "height":"100"
+      }
+    },
+      "url" : "https://sebhastian.com/find-largest-number-array-javascript/",
+      "wordCount" : "566",
+      "potentialAction": [
+          { "@type": "ReadAction", "target": ["https://sebhastian.com/find-largest-number-array-javascript/"] }
+    ]
+  }
+</script>
+
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css?ff=1&amp;wps=true&amp;ez_used_css_s=13"/>
+  <link rel="preload" href="/css/style.min.css?v=2&amp;ez_used_css_s=13" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;"/><noscript><link rel="stylesheet" href="/css/style.min.css?ff=1&amp;v=2&amp;wps=true&amp;ez_used_css_s=13"/></noscript>
+  <link rel="preload" href="/css/syntax.min.css?ez_used_css_s=13" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;"/><noscript><link rel="stylesheet" href="/css/syntax.min.css?ff=1&amp;wps=true&amp;ez_used_css_s=13"/></noscript>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-121785745-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-121785745-4');
+  </script>
+<style id='ezoicCSS'>.ezoic-at-0{float:none !important;margin-right:auto !important;max-width:100% !important;padding:0;margin-bottom:15px !important;text-align:center !important;margin-top:15px !important;display:block !important;line-height:0px;margin-left:auto !important;}
+.ezoic-ad.box-4162{min-width:250px;min-height:250px;}
+.ezoic-ad.large-leaderboard-2133{min-width:336px;min-height:280px;}
+.ezoic-ad.leader-1137{min-width:728px;min-height:90px;}
+.ezoic-ad.large-mobile-banner-1172{min-height:0px !important;justify-content:space-between;background:0 0 !important;margin-bottom:15px !important !important;display:flex !important;min-width:580px;margin-top:15px !important !important;width:580px;}
+.ezoic-ad.large-mobile-banner-2161{min-width:300px;min-height:250px;}
+.ezoic-ad.box-1106{min-height:280px;min-width:336px;}
+.ezoic-ad.large-billboard-2160{flex-direction:column !important;align-items:center;margin-right:0px !important;margin-left:0px !important;min-width:336px;min-height:280px;justify-content:center;display:flex !important;}
+.ezoic-ad.medrectangle-3170{min-width:250px;min-height:250px;}
+.ezoic-ad.medrectangle-2100{line-height:0px;padding:0;float:none !important;display:inline-block;min-width:728px;min-height:90px;max-width:100% !important;}
+.ezoic-ad{display:inline-block;border:0px;}.ezoic-ad>div>iframe{margin:0px!important;padding:0px!important;}
+.ezmob-footer{position:fixed;left:0;bottom:0;width:100%;background:#fff;z-index:100000;line-height:0}.ezmob-footer-desktop{background-color:#fffc;border-top:1px solid #d3d3d3;padding-top:5px}.ezmob-footer-close{cursor:pointer;color:#b2b2b2;border:1px solid #b2b2b2;border-radius:20px;background:#fff;line-height:20px;display:inline-block;font-size:20px;font-family:arial,sans-serif;padding:0 5px;position:absolute;top:5px;right:5px;height:24px;width:21px;text-align:center}body {
+					padding-bottom: 100px !important;
+					height: auto;
+				}
+				</style><script type="text/javascript">var ezouid = "1";</script><base href="https://sebhastian.com/find-largest-number-array-javascript/"><script type='text/javascript'>
+var ezoTemplate = 'pub_site';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '1';
+var ezo_elements_to_check = Array();
+</script><!-- START EZHEAD -->
+<script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 246135;
+var ezdomain = 'sebhastian.com';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl(pvID, rv) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_246135=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+}
+function attach_ezolpl(pvID, rv) {
+    if (document.readyState === "complete") {
+        create_ezolpl(pvID, rv);
+    }
+    if(window.attachEvent) {
+        window.attachEvent("onload", create_ezolpl, pvID, rv);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl(pvID, rv);
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl.bind(null, pvID, rv);
+        }
+    }
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["202fd0dc-b305-46b8-4886-910947b530fb", "false"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script>
+<script type="text/javascript">var _audins_dom="sebhastian_com",_audins_did=246135;__ez.queue.addFile('/detroitchicago/cmbv2.js', '/detroitchicago/cmbv2.js?gcb=195-1&cb=04-3y02-8y06-13y07-2y1d-7y0b-6y0d-23y17-4y1b-5y20-4y21-1y23-5y25-3y26-4y27-9y33-4y3a-12y3b-6y5d-2y61-22y68-1&cmbcb=141&sj=x04x02x06x07x1dx0bx0dx17x1bx20x21x23x25x26x27x33x3ax3bx5dx61x68', true, [], true, false, true, false);</script>
+<script type="text/javascript" defer>__ez.queue.addFile('/detroitchicago/cmbdv2.js', '/detroitchicago/cmbdv2.js?gcb=195-1&cb=03-8y0c-6y1c-5y62-22&cmbcb=141&sj=x03x0cx1cx62', true, ['/detroitchicago/cmbv2.js'], true, false, true, false);</script></head><body><script>var ezAardvarkDetected;function ezDetectAardvark(){if(typeof __ez!=='undefined'&&typeof __ez.bit!=='undefined'){let bait=document.createElement("div");bait.className="textads banner-ads banner_ads ad-unit ad-zone ad-space adsbox";bait.style.height="1px";document.body.appendChild(bait);let baitOffsetHeight=bait.offsetHeight;if(typeof window["_ezaq"]!="undefined"){if(baitOffsetHeight){ezAardvarkDetected=false;__ez.bit.AddAndFire(window["_ezaq"]["page_view_id"],[(new __ezDotData('is_ad_blocked',false))]);}
+else{ezAardvarkDetected=true;__ez.bit.AddAndFire(window["_ezaq"]["page_view_id"],[(new __ezDotData('is_ad_blocked',true))]);}
+var observer=new MutationObserver(function(e){if(e[0].removedNodes){ezAardvarkDetected=true;__ez.bit.AddAndFire(window["_ezaq"]["page_view_id"],[(new __ezDotData('is_ad_blocked',true))]);}});}
+observer.observe(bait,{childList:true,attributes:true});}}
+window.addEventListener('load',(e)=>{ezDetectAardvark();});</script><nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm" role="navigation">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="ezlazyload img-fluid" height="30" width="180" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22485%22%20height%3D%22100%22%3E%3C%2Fsvg%3E" alt="Sebhastian Logo" ezimgfmt="rs rscb11 src ng ngcb10" data-ezsrc="/img/logo-sebhastian.png"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/javascript-tutorials">JavaScript</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/newsletter">Newsletter</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav><div class="main container pt-5">
+      <div class="row">
+          <main class="col-lg-8">
+<article class="mb-5 card border-0">
+  <div class="card-body pb-5 px-4"><span id="ezoic-pub-ad-placeholder-167" class="ezoic-adpicker-ad"></span>
+    <h1 itemprop="title">How to find the largest number in a JavaScript array</h1>
+    <p class="article-metadata author" style="font-size: .7em; margin-bottom: 0;">
+      by <a href="/nathan" style="color: #087990;">Nathan Sebhastian</a>
+    </p>
+    <p class="text-secondary article-metadata date" style="font-size: .7em">
+        Posted on Jul 09, 2021 
+    </p>
+    
+    <hr class="entry-content-hr"/>
+    
+    <section class="entry-content"> 
+      <p>There are two ways you can find the largest number from a JavaScript array:<span id="ezoic-pub-ad-placeholder-170" class="ezoic-adpicker-ad"></span><span class="ezoic-ad ezoic-at-0 medrectangle-3 medrectangle-3170 adtester-container adtester-container-170" data-ez-name="sebhastian_com-medrectangle-3"><span id="div-gpt-ad-sebhastian_com-medrectangle-3-0" ezaw="250" ezah="250" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:250px;min-width:250px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[250,250],'sebhastian_com-medrectangle-3','ezslot_9',170,'0','0'])};__ez_fad_position('div-gpt-ad-sebhastian_com-medrectangle-3-0');</script></span></span></p>
+<ul>
+<li>Using the <code>forEach()</code> array method</li>
+<li>Using the <code>reduce()</code> array method</li>
+</ul>
+<p>This tutorial will help you learn how to do both. Let’s start with using the <code>forEach()</code> method first.</p><span class="ezoic-autoinsert-video ezoic-under_first_paragraph"></span><!-- ezoic_video_placeholder-under_first_paragraph-640x360-999998-clearholder --><!-- ezoic_video_placeholder-under_first_paragraph-640x360-999998-nonexxxclearxxxblock --><!-- ezoic_video_placeholder-under_first_paragraph-426x240-999998-clearholder --><!-- ezoic_video_placeholder-under_first_paragraph-426x240-999998-nonexxxclearxxxblock --><!-- ezoic_video_placeholder-under_first_paragraph-384x216-999998-clearholder --><!-- ezoic_video_placeholder-under_first_paragraph-384x216-999998-nonexxxclearxxxblock -->
+<h2 id="finding-the-largest-number-in-an-array-using-foreach">Finding the largest number in an array using forEach()</h2>
+<p>The Array <code>forEach()</code> method allows you to loop over an array in order from the first index to the last index.</p><span id="ezoic-pub-ad-placeholder-162" class="ezoic-adpicker-ad"></span><span class="ezoic-ad ezoic-at-0 box-4 box-4162 adtester-container adtester-container-162" data-ez-name="sebhastian_com-box-4"><span id="div-gpt-ad-sebhastian_com-box-4-0" ezaw="250" ezah="250" style="position:relative;z-index:0;display:inline-block;padding:0;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:250px;min-width:250px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[250,250],'sebhastian_com-box-4','ezslot_1',162,'0','0'])};__ez_fad_position('div-gpt-ad-sebhastian_com-box-4-0');</script></span></span>
+<p>It accepts a <code>callback</code> function from which it passes the value contained inside the array for you to process.<span id="ezoic-pub-ad-placeholder-171" class="ezoic-adpicker-ad"></span></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Array</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span> <span class="nx">callbackFn</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">index</span><span class="p">,</span> <span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// do something for each element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">},</span> <span class="nx">thisArg</span><span class="p">);</span>
+</span></span></code></pre></div><p>Here’s an example of a <code>forEach()</code> method in action:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">element</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p>The code above should show the following logs:</p><span class="ezoic-autoinsert-video ezoic-under_second_paragraph"></span><!-- ezoic_video_placeholder-under_second_paragraph-640x360-999997-clearholder --><!-- ezoic_video_placeholder-under_second_paragraph-640x360-999997-nonexxxclearxxxblock --><!-- ezoic_video_placeholder-under_second_paragraph-426x240-999997-clearholder --><!-- ezoic_video_placeholder-under_second_paragraph-426x240-999997-nonexxxclearxxxblock --><!-- ezoic_video_placeholder-under_second_paragraph-384x216-999997-clearholder --><!-- ezoic_video_placeholder-under_second_paragraph-384x216-999997-nonexxxclearxxxblock -->
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="m">5</span>
+</span></span><span class="line"><span class="cl"><span class="m">6</span>
+</span></span><span class="line"><span class="cl"><span class="m">7</span>
+</span></span><span class="line"><span class="cl"><span class="m">8</span>
+</span></span><span class="line"><span class="cl"><span class="m">9</span>
+</span></span><span class="line"><span class="cl"><span class="m">10</span>
+</span></span></code></pre></div><p><span id="ezoic-pub-ad-placeholder-133" class="ezoic-adpicker-ad"></span><span class="ezoic-ad ezoic-at-0 large-leaderboard-2 large-leaderboard-2133 adtester-container adtester-container-133" data-ez-name="sebhastian_com-large-leaderboard-2"><span id="div-gpt-ad-sebhastian_com-large-leaderboard-2-0" ezaw="336" ezah="280" style="position:relative;z-index:0;display:inline-block;padding:0;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:280px;min-width:336px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[336,280],'sebhastian_com-large-leaderboard-2','ezslot_4',133,'0','0'])};__ez_fad_position('div-gpt-ad-sebhastian_com-large-leaderboard-2-0');</script></span></span>Knowing how the <code>forEach()</code> method works, Here’s how you can find the largest number in an array:</p>
+<ul>
+<li>Initialize a variable with the value <code>0</code> called <code>temp</code></li>
+<li>Compare and see if the value of <code>temp</code> is smaller than the current element inside the loop</li>
+<li>If <code>temp</code> is smaller, then assign the current element value into <code>temp</code></li>
+</ul>
+<p>Here’s a working example of the steps above:</p><span class="ezoic-autoinsert-video ezoic-mid_content"></span><!-- ezoic_video_placeholder-mid_content-640x360-999996-clearholder --><!-- ezoic_video_placeholder-mid_content-640x360-999996-nonexxxclearxxxblock --><!-- ezoic_video_placeholder-mid_content-426x240-999996-clearholder --><!-- ezoic_video_placeholder-mid_content-426x240-999996-nonexxxclearxxxblock --><!-- ezoic_video_placeholder-mid_content-384x216-999996-clearholder --><!-- ezoic_video_placeholder-mid_content-384x216-999996-nonexxxclearxxxblock -->
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">element</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">temp</span> <span class="o">&lt;</span> <span class="nx">element</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">temp</span> <span class="o">=</span> <span class="nx">element</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The largest number in the array: </span><span class="si">${</span><span class="nx">temp</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span></code></pre></div><p><span id="ezoic-pub-ad-placeholder-137" class="ezoic-adpicker-ad"></span><span class="ezoic-ad ezoic-at-0 leader-1 leader-1137 adtester-container adtester-container-137" data-ez-name="sebhastian_com-leader-1"><span id="div-gpt-ad-sebhastian_com-leader-1-0" ezaw="728" ezah="90" style="position:relative;z-index:0;display:inline-block;padding:0;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:90px;min-width:728px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[728,90],'sebhastian_com-leader-1','ezslot_0',137,'0','0'])};__ez_fad_position('div-gpt-ad-sebhastian_com-leader-1-0');</script></span></span>The resulting log will be as follows:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">The largest number in the array: <span class="m">10</span>
+</span></span></code></pre></div><p>Let’s test the method by creating a randomized array of numbers:<span id="ezoic-pub-ad-placeholder-172" class="ezoic-adpicker-ad"></span><span class="ezoic-ad ezoic-at-0 large-mobile-banner-1 large-mobile-banner-1172 adtester-container adtester-container-172 ezoic-ad-adaptive" data-ez-name="sebhastian_com-large-mobile-banner-1"><span class="ezoic-ad large-mobile-banner-1 large-mobile-banner-1-multi-172 adtester-container adtester-container-172" data-ez-name="sebhastian_com-large-mobile-banner-1"><span id="div-gpt-ad-sebhastian_com-large-mobile-banner-1-0" ezaw="290" ezah="250" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:250px;min-width:290px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[250,250],'sebhastian_com-large-mobile-banner-1','ezslot_5',172,'0','0'])};__ez_fad_position('div-gpt-ad-sebhastian_com-large-mobile-banner-1-0');</script></span></span><span class="ezoic-ad large-mobile-banner-1 large-mobile-banner-1-multi-172 adtester-container adtester-container-172" data-ez-name="sebhastian_com-large-mobile-banner-1"><span id="div-gpt-ad-sebhastian_com-large-mobile-banner-1-0_1" ezaw="290" ezah="250" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:250px;min-width:290px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[250,250],'sebhastian_com-large-mobile-banner-1','ezslot_6',172,'0','1'])};__ez_fad_position('div-gpt-ad-sebhastian_com-large-mobile-banner-1-0_1');</script></span></span><style> .large-mobile-banner-1-multi-172{border:none !important;display:block !important;float:none !important;line-height:0px;margin-bottom:15px !important;margin-left:auto !important;margin-right:auto !important;margin-top:15px !important;max-width:100% !important;min-height:250px;min-width:250px;padding:0;text-align:center !important;}</style></span></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">10</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="nx">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">element</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">temp</span> <span class="o">&lt;</span> <span class="nx">element</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">temp</span> <span class="o">=</span> <span class="nx">element</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The largest number in the array: </span><span class="si">${</span><span class="nx">temp</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span></code></pre></div><p>The result of the code above will be <strong>85</strong></p>
+<p>And that’s how you use the <code>forEach()</code> method to find the largest number in an array.</p>
+<p>Let’s see how you can use the <code>reduce()</code> method to achieve the same goal next.<span id="ezoic-pub-ad-placeholder-143" class="ezoic-adpicker-ad"></span></p><span class="ezoic-autoinsert-video ezoic-long_content"></span><!-- ezoic_video_placeholder-long_content-640x360-999995-clearholder --><!-- ezoic_video_placeholder-long_content-640x360-999995-nonexxxclearxxxblock --><!-- ezoic_video_placeholder-long_content-426x240-999995-clearholder --><!-- ezoic_video_placeholder-long_content-426x240-999995-nonexxxclearxxxblock --><!-- ezoic_video_placeholder-long_content-384x216-999995-clearholder --><!-- ezoic_video_placeholder-long_content-384x216-999995-nonexxxclearxxxblock -->
+<h2 id="finding-the-largest-number-in-an-array-using-reduce">Finding the largest number in an array using reduce()</h2>
+<p>The <code>reduce()</code> method allows you to execute a reducer function for each element in your array.</p>
+<p>A reducer function takes the current accumulated value and the current value to produce a new value.</p>
+<p>For example, suppose you have the following array:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">10</span><span class="p">];</span>
+</span></span></code></pre></div><p>You can call the reduce method on the array as shown below:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">accumulatedValue</span><span class="p">,</span> <span class="nx">currentValue</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// reducer function content
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
+</span></span></code></pre></div><p>The value you <code>return</code> from the function will be the <code>accumulatedValue</code> used for the next iteration of the <code>reduce()</code> method.</p>
+<p>For the first iteration, the <code>accumulatedValue</code> will be assigned with the value at index zero. When the iteration is finished, the <code>reduce()</code> method will return a single value, which is the <code>accumulatedValue</code>.</p><span id="ezoic-pub-ad-placeholder-161" class="ezoic-adpicker-ad"></span><span class="ezoic-ad ezoic-at-0 large-mobile-banner-2 large-mobile-banner-2161 adtester-container adtester-container-161" data-ez-name="sebhastian_com-large-mobile-banner-2"><span id="div-gpt-ad-sebhastian_com-large-mobile-banner-2-0" ezaw="300" ezah="250" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:250px;min-width:300px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[300,250],'sebhastian_com-large-mobile-banner-2','ezslot_7',161,'0','0'])};__ez_fad_position('div-gpt-ad-sebhastian_com-large-mobile-banner-2-0');</script></span></span>
+<p>Knowing this, you can call the <code>Math.max()</code> method inside the reducer function to compare the numbers between the <code>accumulatedValue</code> and the <code>currentValue</code>.</p>
+<p>The returned value will be the largest number from the array as shown below:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">10</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">largestNum</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">accumulatedValue</span><span class="p">,</span> <span class="nx">currentValue</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">accumulatedValue</span><span class="p">,</span> <span class="nx">currentValue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The largest number: </span><span class="si">${</span><span class="nx">largestNum</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// The largest number: 85
+</span></span></span></code></pre></div><p>And that’s how you find the largest number in an array using the <code>reduce()</code> method. You can learn more about the use of <code>reduce()</code> method here:</p><span class="ezoic-autoinsert-video ezoic-longer_content"></span><!-- ezoic_video_placeholder-longer_content-640x360-999994-clearholder --><!-- ezoic_video_placeholder-longer_content-640x360-999994-nonexxxclearxxxblock --><!-- ezoic_video_placeholder-longer_content-426x240-999994-clearholder --><!-- ezoic_video_placeholder-longer_content-426x240-999994-nonexxxclearxxxblock --><!-- ezoic_video_placeholder-longer_content-384x216-999994-clearholder --><!-- ezoic_video_placeholder-longer_content-384x216-999994-nonexxxclearxxxblock -->
+<p><a href="https://sebhastian.com/javascript-reduce/">Understanding JavaScript reduce method</a></p>
+
+    </section><span id="ezoic-pub-ad-placeholder-136" class="ezoic-adpicker-ad"></span>
+  </div>
+</article>
+<div class="mb-5">
+  <div class="p-5" style="background-color: #ddecff">
+    <h3 class="mb-4">Level up your programming skills</h3>
+    <p>
+      I&#39;m sending out an occasional email with the latest programming tutorials.
+      Drop your email in the box below and I&#39;ll send new stuff straight into
+      your inbox!
+    </p>
+    <form action="https://gumroad.com/follow_from_embed_form" method="POST">
+      <input name="seller_id" type="hidden" value="9535339686224"/>
+      <div class="mb-3">
+        <input name="email" type="email" placeholder="Your email here.." class="form-control"/>
+      </div>
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+        <small class="form-text text-muted text-center" style="font-size: 70%">
+          No spam. Unsubscribe anytime.
+        </small>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+          </main><div class="col-lg-4 sidebar-area"><span id="ezoic-pub-ad-placeholder-106" class="ezoic-adpicker-ad"></span><span class="ezoic-ad ezoic-at-0 box-1 box-1106 adtester-container adtester-container-106" data-ez-name="sebhastian_com-box-1"><span id="div-gpt-ad-sebhastian_com-box-1-0" ezaw="336" ezah="280" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:280px;min-width:336px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[336,280],'sebhastian_com-box-1','ezslot_8',106,'0','0'])};__ez_fad_position('div-gpt-ad-sebhastian_com-box-1-0');</script></span><span style="width:336px;display:block;height:14px;margin:auto" class="reportline"><span style="text-align:center;font-size:12px !important;font-family: arial!important;float:left;line-height:normal;"><a href="https://www.ezoic.com/what-is-ezoic/" target="_blank" rel="noopener noreferrer nofollow" style="cursor:pointer"><img src="https://go.ezodn.com/utilcave_com/img/ezoic.png" alt="Ezoic" loading="lazy" style="height:12px !important; padding:2px !important; border:0px !important; cursor:pointer !important; width: 58px !important; margin:0 !important; box-sizing: content-box !important;"/></a></span><span class="ez-report-ad-button" name="?pageview_id=202fd0dc-b305-46b8-4886-910947b530fb&amp;ad_position_id=106&amp;impression_group_id=sebhastian_com-box-1/2023-05-21/4415221946765607&amp;ad_size=336x280&amp;domain_id=246135&amp;url=https://sebhastian.com/find-largest-number-array-javascript/" style="cursor: pointer!important; font-size:12px !important;color: #a5a5a5 ;float:right;text-decoration:none !important;font-family:arial !important;line-height:normal;">report this ad</span></span></span>
+  <section class="card mb-4">
+    <div class="card-body">
+      <h3 class="widget-title">About</h3>
+      <p>
+        Sebhastian is a site that makes learning programming easy with its
+        step-by-step, beginner-friendly tutorials.<br/>
+        Learn JavaScript and other programming languages with clear examples.
+      </p>
+      <p class="my-0">
+        <a href="/about">Learn more about this website</a>
+      </p>
+    </div>
+  </section>
+  <section class="card mb-4" id="sidebar-search">
+  <div class="card-body">
+    <h3 class="widget-title">Search</h3>
+    <p>
+      Type the keyword below and hit enter
+    </p>
+    <div class="row">
+      <div class="col">
+        <form action="/search" class="search-box">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 40 40"> <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path> </svg>
+          <input name="s" class="search-input" id="searchInput" type="text" class="form-control" placeholder="Ex: javascript array"/>
+        </form>
+        </div>
+      </div>
+    </div>
+</section><span id="ezoic-pub-ad-placeholder-160" class="ezoic-adpicker-ad"></span><span class="ezoic-ad ezoic-at-0 large-billboard-2 large-billboard-2160 adtester-container adtester-container-160" data-ez-name="sebhastian_com-large-billboard-2"><span id="div-gpt-ad-sebhastian_com-large-billboard-2-0" ezaw="250" ezah="250" style="position:relative;z-index:0;display:inline-block;padding:0;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:280px;min-width:336px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[250,250],'sebhastian_com-large-billboard-2','ezslot_2',160,'0','0'])};__ez_fad_position('div-gpt-ad-sebhastian_com-large-billboard-2-0');</script></span><span style="width:250px;display:block;height:14px;margin:auto" class="reportline"><span style="text-align:center;font-size:12px !important;font-family: arial!important;float:left;line-height:normal;"><a href="https://www.ezoic.com/what-is-ezoic/" target="_blank" rel="noopener noreferrer nofollow" style="cursor:pointer"><img src="https://go.ezodn.com/utilcave_com/img/ezoic.png" alt="Ezoic" loading="lazy" style="height:12px !important; padding:2px !important; border:0px !important; cursor:pointer !important; width: 58px !important; margin:0 !important; box-sizing: content-box !important;"/></a></span><span class="ez-report-ad-button" name="?pageview_id=202fd0dc-b305-46b8-4886-910947b530fb&amp;ad_position_id=160&amp;impression_group_id=sebhastian_com-large-billboard-2/2023-05-21/7361528574805460&amp;ad_size=250x250&amp;domain_id=246135&amp;url=https://sebhastian.com/find-largest-number-array-javascript/" style="cursor: pointer!important; font-size:12px !important;color: #a5a5a5 ;float:right;text-decoration:none !important;font-family:arial !important;line-height:normal;">report this ad</span></span></span> 
+  <section class="card mb-4">
+  <div class="card-body">
+    <h3 class="widget-title">Tags</h3>
+    <p>Click to see all tutorials tagged with:</p>
+    <div class="tags">
+      <span class="pe-3">
+        <a class="tag android" href="https://sebhastian.com/tags/android/">Android
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag css" href="https://sebhastian.com/tags/css/">CSS
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag devtools" href="https://sebhastian.com/tags/devtools/">DevTools
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag git" href="https://sebhastian.com/tags/git/">Git
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag html" href="https://sebhastian.com/tags/html/">HTML
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag java" href="https://sebhastian.com/tags/java/">Java
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag javascript" href="https://sebhastian.com/tags/javascript/">JavaScript
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag jquery" href="https://sebhastian.com/tags/jquery/">jQuery
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag kotlin" href="https://sebhastian.com/tags/kotlin/">Kotlin
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag mysql" href="https://sebhastian.com/tags/mysql/">MySQL
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag nodejs" href="https://sebhastian.com/tags/nodejs/">NodeJS
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag npm" href="https://sebhastian.com/tags/npm/">npm
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag php" href="https://sebhastian.com/tags/php/">PHP
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag python" href="https://sebhastian.com/tags/python/">Python
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag react" href="https://sebhastian.com/tags/react/">React
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag sequelize" href="https://sebhastian.com/tags/sequelize/">Sequelize
+        </a>
+      </span>
+      
+      <span class="pe-3">
+        <a class="tag tableau" href="https://sebhastian.com/tags/tableau/">Tableau
+        </a>
+      </span>
+      
+    </div>
+  </div>
+</section>
+
+  
+  <div class="sidebar-float"></div>
+<span id="ezoic-pub-ad-placeholder-164" class="ezoic-adpicker-ad"></span></div>
+</div>
+    <span id="ezoic-pub-ad-placeholder-168" class="ezoic-adpicker-ad"></span></div>
+    <footer class="bg-dark">
+  <div class="text-white text-center py-3">
+    <div class="container fs-6 fw-light">
+      © Copyright 2023 Nathan Sebhastian |
+      <a href="/" class="text-light">Back to homepage</a> |
+      <a href="/privacy-policy" class="text-light">Privacy Policy</a> |
+      <a href="/disclaimer" class="text-light">Disclaimer</a>
+    </div>
+  </div>
+</footer>
+<script src="/js/bootstrap.min.js"></script>
+    <script src="/js/fuse.min.js"></script>
+    <script src="/js/search.min.js"></script>
+  
+
+<!--[selectrongo:done]--><div class="ezmob-footer ezoic-floating-bottom ezo_ad ezmob-footer-desktop" id="ezmobfooter"><center><span id="ezoic-pub-ad-placeholder-100"></span><div class="ezmob-footer ezoic-floating-bottom ezo_ad ezmob-footer-desktop" id="ezmobfooter"><center><span class="ezoic-ad ezoic-at-4 medrectangle-2 medrectangle-2100 adtester-container adtester-container-100" data-ez-name="sebhastian_com-medrectangle-2"><span id="div-gpt-ad-sebhastian_com-medrectangle-2-0" ezaw="728" ezah="90" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:90px;min-width:728px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[728,90],'sebhastian_com-medrectangle-2','ezslot_3',100,'0','0'])};__ez_fad_position('div-gpt-ad-sebhastian_com-medrectangle-2-0');</script></span></span></center><span class="ezmob-footer-close" id="ezmob-footer-close" onclick="__ez_close_anchor()" style="display: none;">x</span></div></center></div><script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "N"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script async src="https://g.ezodn.com/cmp/v2/v.js?v=4"></script><script>(function(){if(typeof document.body==='undefined'||document.body===null){return;}
+var attachEvent=function(element,evt,func){if(element.addEventListener){element.addEventListener(evt,func,false);}else{element.attachEvent("on"+evt,func);}};attachEvent(document.body,"ezVigImpression",function(e){if(typeof(_ezaq)!=="undefined"&&typeof e==="object"){__ez.pel.AddAndFire(e.slot,[(new __ezDotData(e.key,e.value))]);}});})();</script><script>window.__ez_vig_close_wrapper=function(closeFunc,urlAddition){closeFunc();var vc={"enabled":false,"useVignetteLoader":true,"fireEventName":"ezVigImpression","impressionSource":"anchor","urlAddition":"utm_content=anc-true","disableFloor":true,"eventHandlerTest":false};if(typeof urlAddition=='string'){vc.urlAddition=urlAddition;}
+var v=newEzVignette(vc);v.handleClick();};</script>
+<script type='text/javascript' data-ezscrex="false" id="a6aa3ffb1f4e4ac9bf95518384b0e2f3"> __cnxiid = 4100567284659991;
+	__cnxau = 'sebhastian_com-cnx-1';
+	setTimeout(function(){
+		(function(){
+			if (typeof(window.cnx) === 'undefined' || !window.cnx) {
+				window.cnx = {}, window.cnx.cmd = [];
+				window.addEventListener("EzoIvent", function (a) {
+					if (a.detail[0] > 1 || a.detail[0] < 0) {
+						! function (e) {
+							var n = e.createElement('iframe');
+							if (typeof(ezVideo) === 'undefined' || !ezVideo) {
+								n.src = 'javascript:false', n.display = 'none', n.onload = function () {
+									var e = n.contentWindow.document,
+										t = e.createElement('script');
+									t.src = 'https://cd.connatix.com/connatix.player.js?cid=5f049401-746e-4449-8c27-b6b9d8e25882', t.setAttribute('async', '1'), t.setAttribute('type', 'text/javascript'), e.body.appendChild(t)
+								}, e.head.appendChild(n);
+							}
+						}(document);
+					}
+				});
+			}
+		})();
+		(new Image).src = 'https://capi.connatix.com/tr/si?token=dceed97a-951e-4c47-b565-c2794ffae817&cid=5f049401-746e-4449-8c27-b6b9d8e25882';
+		cnx.cmd.push(function(){
+			if (typeof(__ezcnxPlayer) === 'undefined' || !__ezcnxPlayer) {
+				cnx({
+					playerId: 'dceed97a-951e-4c47-b565-c2794ffae817',
+				}).render('a6aa3ffb1f4e4ac9bf95518384b0e2f3',(e,n)=>{
+					__ezcnxPlayer = n;
+					if (typeof(__ez_auto_adjust_outstream_float) === 'undefined') {
+						__ezcnxPlayerDelay = [];
+						__ezcnxPlayerDelay.push('outstreamFloatDestroy');
+					} else {
+						__ez_outstream_float_destroy && __ez_outstream_float_destroy();
+					}
+					if (typeof(__ez_outstream_player_tracking) === 'undefined') {
+						if (typeof(__ezcnxPlayerDelay) === 'undefined') {
+							__ezcnxPlayerDelay = [];
+						}
+						__ezcnxPlayerDelay.push('outstreamtracking');
+					} else {
+						__ez_outstream_player_tracking();
+					}
+					let railToClose = (__ezcnxPlayer.getFloatingSettings() && __ezcnxPlayer.getFloatingSettings().scrollPosition === 1) ? 'left' : 'right';
+					if (window.__ez_close_rail) {
+						if (__ezcnxPlayer.getPlayerType() !== 0) {
+							__ezcnxPlayer.once('adImpression', function(e) {
+								window.__ez_close_rail && __ez_close_rail('ez-sidebar-wall-' + railToClose);
+							});
+						} else if (__ezcnxPlayer.getFloatingSettings()) {
+							window.__ez_close_rail && __ez_close_rail('ez-sidebar-wall-' + railToClose);
+						}
+					}
+					
+				});
+			}
+		});
+	}, 2000);</script>
+
+	<script>
+		function loadSovrnSignal() {
+			var sovrnSignalScript = document.createElement('script');
+			sovrnSignalScript.src = "//get.s-onetag.com/48e9aff7-e1fb-417c-a320-ed101cdab11f/tag.min.js";
+			sovrnSignalScript.async = true;
+			document.body.appendChild(sovrnSignalScript);
+		}
+		window.addEventListener('load', (e) => {
+			loadSovrnSignal();
+		});
+	</script>
+<script>
+__ez.queue.addFile("pubmaticOpenwrapJS", "https://ads.pubmatic.com/AdServer/js/pwt/162833/9311/pwt.js", true, [], true, false, true, true);
+var __ezPwtBidders=['ix','rubicon','appnexus','yieldmo','sovrn','openx','nobid','criteo','pulsepoint','yahoossp','adtelligent','vidoomy','medianet','unruly','onetag','smartadserver','sharethrough','pubmatic'];
+__ez.queue.addFunc("openwrapRequestAdUnits", "openwrapRequestAdUnits", [[{code:"div-gpt-ad-sebhastian_com-leader-1-0",divId:"div-gpt-ad-sebhastian_com-leader-1-0",adUnitId:"/1254144,22284635885/sebhastian_com-leader-1",adUnitIndex:"0",mediaTypes:{banner:{sizes:[[728,90]]}}},{code:"div-gpt-ad-sebhastian_com-box-4-0",divId:"div-gpt-ad-sebhastian_com-box-4-0",adUnitId:"/1254144,22284635885/sebhastian_com-box-4",adUnitIndex:"1",mediaTypes:{banner:{sizes:[[250,250]]}}},{code:"div-gpt-ad-sebhastian_com-large-billboard-2-0",divId:"div-gpt-ad-sebhastian_com-large-billboard-2-0",adUnitId:"/1254144,22284635885/sebhastian_com-large-billboard-2",adUnitIndex:"2",mediaTypes:{banner:{sizes:[[250,250]]}}},{code:"div-gpt-ad-sebhastian_com-medrectangle-2-0",divId:"div-gpt-ad-sebhastian_com-medrectangle-2-0",adUnitId:"/1254144,22284635885/sebhastian_com-medrectangle-2",adUnitIndex:"3",mediaTypes:{banner:{sizes:[[728,90]]}}},{code:"div-gpt-ad-sebhastian_com-large-leaderboard-2-0",divId:"div-gpt-ad-sebhastian_com-large-leaderboard-2-0",adUnitId:"/1254144,22284635885/sebhastian_com-large-leaderboard-2",adUnitIndex:"4",mediaTypes:{banner:{sizes:[[300,250],[336,280]]}}},{code:"div-gpt-ad-sebhastian_com-large-mobile-banner-1-0",divId:"div-gpt-ad-sebhastian_com-large-mobile-banner-1-0",adUnitId:"/1254144,22284635885/sebhastian_com-large-mobile-banner-1",adUnitIndex:"5",mediaTypes:{banner:{sizes:[[250,250]]}}},{code:"div-gpt-ad-sebhastian_com-large-mobile-banner-1-0_1",divId:"div-gpt-ad-sebhastian_com-large-mobile-banner-1-0_1",adUnitId:"/1254144,22284635885/sebhastian_com-large-mobile-banner-1",adUnitIndex:"6",mediaTypes:{banner:{sizes:[[250,250]]}}},{code:"div-gpt-ad-sebhastian_com-large-mobile-banner-2-0",divId:"div-gpt-ad-sebhastian_com-large-mobile-banner-2-0",adUnitId:"/1254144,22284635885/sebhastian_com-large-mobile-banner-2",adUnitIndex:"7",mediaTypes:{banner:{sizes:[[300,250]]}}},{code:"div-gpt-ad-sebhastian_com-box-1-0",divId:"div-gpt-ad-sebhastian_com-box-1-0",adUnitId:"/1254144,22284635885/sebhastian_com-box-1",adUnitIndex:"8",mediaTypes:{banner:{sizes:[[336,280]]}}},{code:"div-gpt-ad-sebhastian_com-medrectangle-3-0",divId:"div-gpt-ad-sebhastian_com-medrectangle-3-0",adUnitId:"/1254144,22284635885/sebhastian_com-medrectangle-3",adUnitIndex:"9",mediaTypes:{banner:{sizes:[[250,250]]}}}]], false, ['pubmaticOpenwrapJS'], true, true, true, true);
+var PWT={};var owpbjs=owpbjs||{};owpbjs.que=owpbjs.que||[];PWT.HookForPrebidSetConfig=function(config){var schain_domain="ezoic.ai";var dom="";if(typeof __ez_nid!="undefined"&&__ez_nid==21732118914){schain_domain="ezoic.co.uk";}
+if(typeof location.host!="undefined"){dom=location.host;}
+config.schain={validation:"strict",config:{ver:"1.0",complete:1,nodes:[{asi:schain_domain,sid:__sellerid,domain:dom,hp:1,}],},};};function openwrapRequestAdUnits(pwtConf){if(typeof __ezPwtBidders!='undefined'){PWT.HookForPrebidRequestBids=function(adUnits){for(var au_i in adUnits){var toRemove=[];for(var bid_i in adUnits[au_i].bids){if(!__ezPwtBidders.includes(adUnits[au_i].bids[bid_i].bidder)){toRemove.push(bid_i);}}
+for(var remove_i in toRemove.reverse()){adUnits[au_i].bids.splice(toRemove[remove_i],1);}}};}
+window.PWT.requestBids(pwtConf,openwrapBidsBackHandler);}
+function openwrapRefreshSlot(slot){var conf=PWT.generateConfForGPT([slot]);openwrapRequestAdUnits(conf);}
+function openwrapBidsBackHandler(response){if(typeof window.ezosetowbids=="function"){window.ezosetowbids(response);}else{window.ezosetowbidsInterval=setInterval(function(response){if(typeof window.ezosetowbids=='function'){window.ezosetowbids(response);}},150,response);}}
+owpbjs.que.push(function(){owpbjs.onEvent('adRenderSucceeded',function(e){var slot=getSlotForhb(e.bid.adUnitCode);var ic=slot.getTargeting('ic')[0];if(typeof ic!=='undefined'){var ic_int=parseInt(ic);if(!isNaN(ic_int)){__ez.pel.Add(slot,[(new __ezDotData('refresh_count',ic_int))]);}}
+var ebbr=slot.getTargeting('eb_br')[0];if(typeof ebbr!='undefined'){__ez.pel.Add(slot,[(new __ezDotData('filled_bid_hash',ebbr))]);}
+var last_bid_val=0;if(typeof slot.getTargeting("lb")[0]!="undefined"){last_bid_val=parseInt(slot.getTargeting("lb")[0])/100000.0;}
+var ssid=0;var ssidMap={"amx":11290,"ix":10082,"medianet":11307,"nobid":11319,"onetag":11291,"pubmatic":10061};if(typeof ssidMap[e.bid.bidder.toLowerCase()]!=="undefined"){ssid=ssidMap[e.bid.bidder.toLowerCase()];__ez.pel.Add(slot,[(new __ezDotData("stat_source_id",ssid))],e.bid.cpm/1000,0,e.bid.cpm/1000,last_bid_val,ssid);}
+var media_type=slot.getTargeting("hb_format");var prebid_source=slot.getTargeting("hb_rt");if(typeof media_type!==undefined&&media_type.length>0&&String(media_type[0])!==""){var media_type_str=String(media_type[0]);__ez.pel.Add(slot,[(new __ezDotData("media_type",media_type_str))]);}
+if(typeof prebid_source!==undefined&&prebid_source.length>0&&String(prebid_source[0])!==""){var prebid_source_str=String(prebid_source[0]);__ez.pel.Add(slot,[(new __ezDotData("prebid_source",prebid_source_str))]);}
+__ez.pel.Add(slot,[(new __ezDotData("loaded",1))],e.bid.cpm/1000,0,e.bid.cpm/1000,last_bid_val,ssid);__ez.pel.Fire();});});function getSlotForhb(adUnit){for(slot in window.ezslots){if(window[window.ezslots[slot]].getSlotElementId()==adUnit){return window[window.ezslots[slot]];}}}
+</script>
+<script>function __ez_fad_ezpbinit(){var s = document.createElement( 'script' );
+	s.setAttribute( 'src', '//go.ezodn.com/hb/dall.js?cb=195-1-56' );
+	s.onerror = function () {window.ezDallErr = true};
+	document.body.appendChild( s );}__ez.queue.addFile('/detroitchicago/kenai.js', '/detroitchicago/kenai.js?gcb=1&cb=6', false, [], true, false, true, false);var ezYieldmo={bidder:'yieldmo',params:{placementId:'2834942196124164132'}};var ezjsps=function(obj){return JSON.parse(JSON.stringify(obj));};var epbjs=epbjs||{};epbjs.que=epbjs.que||[];epbjs.bidderTimeout=2000;epbjs.useAdj=true;epbjs.SS={"adtelligent":11316,"appnexus":10087,"criteo":10050,"ix":10082,"medianet":11307,"nobid":11319,"onetag":11291,"openx":10015,"pubmatic":10061,"pulsepoint":11301,"rubicon":10063,"sharethrough":11309,"smartadserver":11335,"sovrn":10017,"unruly":10097,"vidoomy":11331,"yahoossp":11318,"yieldmo":11315};epbjs.bidders=['adtelligent','appnexus','criteo','ix','medianet','nobid','onetag','openx','pubmatic','pulsepoint','rubicon','sharethrough','smartadserver','sovrn','unruly','vidoomy','yahoossp','yieldmo'];epbjs.que.push(function(){});epbjs.bidderSettings={};epbjs.gadj=1.000000;var __enableAnalytics=false;epbjs.testFeatures=[''];
+var __s2sbidders=[];
+var __s2sinstreambidders=[];
+var __allBidders=['ix','rubicon','appnexus','yieldmo','sovrn','openx','nobid','criteo','pulsepoint','yahoossp','adtelligent','vidoomy','medianet','pubmatic','unruly','onetag','smartadserver','sharethrough'];
+__ez.queue.addFile('/detroitchicago/portland.js', '/detroitchicago/portland.js?gcb=1&cb=3', true, [], true, false, true, false);__ez.queue.addFunc("epbjsRequestAdUnits", "epbjsRequestAdUnits", [[{code: 'div-gpt-ad-sebhastian_com-leader-1-0', mediaTypes: {banner: { sizes:[[728,90]] }}, bids: [{bidder: 'ix', params: { siteId: '305149', size: [728,90], video: {} }},{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'appnexus', params: { placementId: '22485185', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezYieldmo)] },{code: 'div-gpt-ad-sebhastian_com-box-4-0', mediaTypes: {banner: { sizes:[[250,250]] }}, bids: [{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'appnexus', params: { placementId: '22485185', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezYieldmo)] },{code: 'div-gpt-ad-sebhastian_com-large-billboard-2-0', mediaTypes: {banner: { sizes:[[250,250]] }}, bids: [{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'appnexus', params: { placementId: '22485185', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezYieldmo)] },{code: 'div-gpt-ad-sebhastian_com-medrectangle-2-0', mediaTypes: {banner: { sizes:[[728,90]] }}, bids: [{bidder: 'ix', params: { siteId: '305141', size: [728,90], video: {} }},{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'appnexus', params: { placementId: '22485185', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezYieldmo)] },{code: 'div-gpt-ad-sebhastian_com-large-leaderboard-2-0', mediaTypes: {banner: { sizes:[[300,250],[336,280]] }}, bids: [{bidder: 'ix', params: { siteId: '305148', size: [300,250], video: {} }},{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'appnexus', params: { placementId: '22485185', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezYieldmo)] },{code: 'div-gpt-ad-sebhastian_com-large-mobile-banner-1-0', mediaTypes: {banner: { sizes:[[250,250]] }}, bids: [{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'appnexus', params: { placementId: '22485185', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezYieldmo)] ,sizeMapping: [
+			{
+				minWidth: 250,
+				sizes: [[250,250]]
+			}]},{code: 'div-gpt-ad-sebhastian_com-large-mobile-banner-1-0_1', mediaTypes: {banner: { sizes:[[250,250]] }}, bids: [{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'appnexus', params: { placementId: '22485185', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezYieldmo)] ,sizeMapping: [
+			{
+				minWidth: 250,
+				sizes: [[250,250]]
+			}]},{code: 'div-gpt-ad-sebhastian_com-large-mobile-banner-2-0', mediaTypes: {banner: { sizes:[[300,250]] }}, bids: [{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'appnexus', params: { placementId: '22485185', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezYieldmo)] },{code: 'div-gpt-ad-sebhastian_com-box-1-0', mediaTypes: {banner: { sizes:[[336,280]] }}, bids: [{bidder: 'ix', params: { siteId: '305136', size: [336,280], video: {} }},{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'appnexus', params: { placementId: '22485185', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezYieldmo)] },{code: 'div-gpt-ad-sebhastian_com-medrectangle-3-0', mediaTypes: {banner: { sizes:[[250,250]] }}, bids: [{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'appnexus', params: { placementId: '22485185', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezYieldmo)] }]], false, ['/detroitchicago/portland.js'], true, true, true, true);var ez__id5pd = 'MTA9MTIwLjEzOC4xMi44NyYxMj1Nb3ppbGxhJTJGNS4wKyUyOFdpbmRvd3MrTlQrMTAuMCUzQitXaW42NCUzQit4NjQlMjkrQXBwbGVXZWJLaXQlMkY1MzcuMzYrJTI4S0hUTUwlMkMrbGlrZStHZWNrbyUyOStDaHJvbWUlMkYxMTMuMC4wLjArU2FmYXJpJTJGNTM3LjM2';var ez__uIdHash = 'e777dc51f499adb633a1f4e4c81fc393ed7fb854aa050518ed0eaa14af4bbc41';var ez__sspDomain = 'sebhastian.com';</script>
+<script src="/detroitchicago/augusta.js?cb=24" async data-ezscrex="false"></script>
+<script async data-ezscrex="false">__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_load(0,0);__ez.fads.__ez_fad_scrollmon();});</script>
+
+		<script>setTimeout(function(){let cookieTest=getCookie("ezvignetteviewed");if(cookieTest==""){window.googletag=window.googletag||{};googletag.cmd=googletag.cmd||[];googletag.cmd.push(function(){if(ezslot_interstitial==null){return;}
+googletag.display(ezslot_interstitial);googletag.pubads().refresh([ezslot_interstitial]);});}},1000);function getCookie(cname){let name=cname+"=";let ca=document.cookie.split(';');for(let i=0;i<ca.length;i++){let c=ca[i];while(c.charAt(0)==' '){c=c.substring(1);}
+if(c.indexOf(name)==0){return c.substring(name.length,c.length);}}
+return "";}</script>
+<script type="text/javascript" data-cfasync="false">!function(){var e=function(e,t){for(var r=0;r<t.length;r++){var n=t[r];if(0==n.complete||void 0!==n.readyState&&n.readyState<4){var o=n.getAttribute("src")||n.currentSrc;void 0!==n.readyState&&0==n.readyState?n.addEventListener("loadstart",(function(e){var t=e.currentTarget.getAttribute("src")||e.currentSrc;window.ezorqs(e,t)})):(o=n.getAttribute("src")||n.currentSrc,window.ezorqs(n,o)),n.addEventListener("load",(function(e){var t=e.currentTarget.getAttribute("src")||e.srcElement.currentSrc;window.ezorqe(e,t)})),n.addEventListener("loadeddata",(function(e){var t=e.currentTarget.getAttribute("src")||e.srcElement.currentSrc;window.ezorqe(e,t)})),n.addEventListener("error",(function(e){var t=e.currentTarget.getAttribute("src")||e.srcElement.currentSrc;window.ezorqe(e,t)}))}}};function t(e){for(var t=0;t<document.styleSheets.length;t++)if(document.styleSheets[t].href==e)return!0;return!1}__ez_addAllListeners=function(){e(0,document.querySelectorAll("img")),e(0,document.querySelectorAll("video")),e(0,document.querySelectorAll("audio")),function(e){for(var r=0;r<e.length;r++){var n=e[r];if(("preload"==n.getAttribute("rel")||"stylesheet"==n.getAttribute("rel"))&&null!=n.getAttribute("href")&&t(n.getAttribute("href"))){window.ezorqs(n,n.getAttribute("href"));var o=document.createElement("img");o.onerror=function(e){void 0!==e.path&&void 0!==e.path[0].currentSrc?window.ezorqe(n,e.path[0].currentSrc):void 0!==e.srcElement&&void 0!==e.srcElement.href&&window.ezorqe(n,e.srcElement.href)},o.src=n.getAttribute("href")}}}(document.querySelectorAll("link")),void 0!==window.__ez.ssaf&&window.__ez.ssaf.indexOf(16)>-1&&void 0!==window.__ez.sshsdef&&!1===window.__ez.sshsdef&&Element.prototype.addEventListener&&("function"==typeof window.onload&&(window.addEventListener("load",window.onload),window.onload=null),"function"==typeof document.onload&&(document.addEventListener.addEventListener("load",document.onload),document.onload=null))},__ez.queue.addFunc("__ez_addAllListeners","__ez_addAllListeners",null,!1,["/detroitchicago/tulsa.js"],!0,!0,!0,!0)}();</script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 1;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script><script type='text/javascript' style='display:none;' async>
+</script>
+</body></html>

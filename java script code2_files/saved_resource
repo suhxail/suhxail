@@ -1,0 +1,49 @@
+
+var ftGUID_4167863="55852BE80E5AEC";
+var ftConfID_4167863="0";
+var ftParams_4167863="ftOBA=1&ft_agentEnv=0&ft_referrer=https%3A%2F%2F2c5edce3754cf1933a9b360b5db79efd.safeframe.googlesyndication.com%2Fsafeframe%2F1-0-40%2Fhtml%2Fcontainer.html&us_privacy=${US_PRIVACY}&cachebuster=485677.1738304231&ft_dv=%5B%25ft_dv%25%5D";
+var ftKeyword_4167863="";
+var ftCustom_4167863="";
+var ftSection_4167863="";
+var ftSegment_4167863="";
+var ftSegmentList_4167863=[];
+var ftRuleMatch_4167863="0";
+var ftTimestamp_4167863="1684695068";
+var ftGeoC2_4167863="in";
+var ftGeoState_4167863="tn";
+var ftGeoCity_4167863="dindigul";
+var ftISP_4167863="vodafone idea ltd";
+var ftSpeed_4167863="mobile";
+var ftConnType_4167863="mobile";
+var ftDMA_4167863="356007";
+var ftLong_4167863="77.52";
+var ftLat_4167863="10.44";
+var ftPostal_4167863="624601";
+var ftTimeZone_4167863="+530";
+var ftMobileCarrier_4167863="vi india";
+var ftImp4167863 = {};
+ftImp4167863.privacy = "x";
+ftImp4167863.guidAge = "34";
+ftImp4167863.impID = "1B93E5D4-455D-F6A4-6830-CE107AE39DB4";
+ftImp4167863.duid = "FT:55852BE80E5AEC";
+
+ftImp4167863.ft_tpplid = "";
+ftImp4167863.ft_c = {};
+ftImp4167863.gdpr = "";
+ftImp4167863.gdpr_consent = "";
+ftImp4167863.gdpr_pd = "";
+ftImp4167863.oob_consent = "";
+ftImp4167863.gdprStoredConsent = "";
+ftImp4167863.us_privacy = "!!US_PRIVACY!";
+
+ftImp4167863.jsAppend = "1";
+(function(){
+    var tag = document.getElementById('ft_servedby_4167863') || (function(s){
+    	return s[s.length-1];
+    }(document.getElementsByTagName('script'))),
+           js = document.createElement('script');
+    js.src =
+"https://cdn.flashtalking.com/xre/416/4167863/4239500/js/j-4167863-4239500.js";
+    js.id = "ftscript_m4167863";
+    tag.parentNode.insertBefore(js, tag);
+}());
